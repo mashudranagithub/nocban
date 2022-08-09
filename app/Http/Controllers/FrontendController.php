@@ -93,6 +93,34 @@ class FrontendController extends Controller
         return view('frontend.noa');
     }
 
+    public function boaantidoping(){
+        return view('frontend.boaantidoping');
+    }
+
+    public function athletes(){
+        return view('frontend.athletes');
+    }
+
+    public function nationalsportsawards(){
+        return view('frontend.nationalsportsawards');
+    }
+
+    public function regionalsportsawards(){
+        return view('frontend.regionalsportsawards');
+    }
+
+    public function internationalsportsawards(){
+        return view('frontend.internationalsportsawards');
+    }
+
+    public function affiliated(){
+        return view('frontend.affiliated');
+    }
+
+    public function activities(){
+        return view('frontend.activities');
+    }
+
 
 
 

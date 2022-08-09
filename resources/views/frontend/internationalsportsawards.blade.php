@@ -1,10 +1,12 @@
-<?php include('components/page-head.php'); ?>
+@extends('frontend.layouts.master')
+
+@section('content')
 
 <!-- Section Title -->           
 <section class="section-title img-about">
     <div class="overlay-bg"></div>
     <div class="container">
-        <h1>Regional Sports Awards</h1>
+        <h1>International Sports Awards</h1>
     </div>
 </section>
 <!-- End Section Title --> 
@@ -15,17 +17,17 @@
     <div class="crumbs">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
                 <li>Sports Awards</li>  
                 <li>/</li>
-                <li>Regional</li>                                      
+                <li>International</li>                                      
             </ul>
         </div>        
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="assets/img/img-theme/shp.png" class="img-responsive" alt="">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="">
     </div>
 
     <!-- Content Central -->
@@ -37,12 +39,15 @@
                 <!-- Info -->
                 <div class="panel-box">
                     <div class="titles">
-                        <h4><i class="fa fa-rocket"></i>Regional Sports Awards</h4>
+                        <h4><i class="fa fa-rocket"></i>International Sports Awards</h4>
                     </div>
                     <!-- Info ABout --> 
                     <div class="row">
                         <div class="col-md-12">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, veritatis omnis nulla tenetur vitae doloremque quidem libero officiis aspernatur reiciendis, dolorum ad, tempore ullam optio itaque veniam. Neque deserunt blanditiis aspernatur quisquam? Quasi eligendi nostrum consectetur cumque sapiente magnam minus natus, possimus mollitia commodi quaerat, harum eos corporis molestias saepe voluptatem praesentium in iste amet, at ut ullam id atque.</p>
+
+                            <h4><a target="_blank" href="{{asset('frontend/assets/pdf/International_Sports_Awards_Olympic_OCA_Merit_Award.pdf')}}">OCA Merit Award 2014</a></h4>
+                            <h4><a target="_blank" href="{{asset('frontend/assets/pdf/International_Sports_Awards.pdf')}}">ANOC Award 2018</a></h4>
+
                         </div>
                     </div>
                     <!-- End Info ABout --> 
@@ -58,4 +63,4 @@
 </section>
 <!-- End Section Area - Content Central -->
 
-<?php include('components/page-tail.php'); ?>
+@endsection

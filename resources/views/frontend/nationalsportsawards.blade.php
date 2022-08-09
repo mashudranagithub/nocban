@@ -1,10 +1,12 @@
-<?php include('components/page-head.php'); ?>
+@extends('frontend.layouts.master')
+
+@section('content')
 
 <!-- Section Title -->           
 <section class="section-title img-about">
     <div class="overlay-bg"></div>
     <div class="container">
-        <h1>International Sports Awards</h1>
+        <h1>National Sports Awards</h1>
     </div>
 </section>
 <!-- End Section Title --> 
@@ -15,17 +17,17 @@
     <div class="crumbs">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
                 <li>Sports Awards</li>  
                 <li>/</li>
-                <li>International</li>                                      
+                <li>National</li>                                      
             </ul>
         </div>        
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="assets/img/img-theme/shp.png" class="img-responsive" alt="">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="">
     </div>
 
     <!-- Content Central -->
@@ -37,15 +39,12 @@
                 <!-- Info -->
                 <div class="panel-box">
                     <div class="titles">
-                        <h4><i class="fa fa-rocket"></i>International Sports Awards</h4>
+                        <h4><i class="fa fa-rocket"></i>National Sports Awards</h4>
                     </div>
                     <!-- Info ABout --> 
                     <div class="row">
                         <div class="col-md-12">
-
-                            <h4><a target="_blank" href="assets/uploads/International_Sports_Awards_Olympic_OCA_Merit_Award.pdf">OCA Merit Award 2014</a></h4>
-                            <h4><a target="_blank" href="assets/uploads/International_Sports_Awards.pdf">ANOC Award 2018</a></h4>
-
+                            <h4><a target="_blank" href="{{asset('frontend/assets/pdf/National_Sports_Awards001.pdf')}}">National Sports Awards</a></h4>
                         </div>
                     </div>
                     <!-- End Info ABout --> 
@@ -61,4 +60,4 @@
 </section>
 <!-- End Section Area - Content Central -->
 
-<?php include('components/page-tail.php'); ?>
+@endsection

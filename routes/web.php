@@ -97,6 +97,13 @@ Route::get('/esportsroad', [FrontendController::class, 'esportsroad'])->name('es
 Route::get('/boaelec2021', [FrontendController::class, 'boaelec2021'])->name('boaelec2021');
 Route::get('/19asiangames', [FrontendController::class, 'asiangames19'])->name('19asiangames');
 Route::get('/noa', [FrontendController::class, 'noa'])->name('noa');
+Route::get('/boaantidoping', [FrontendController::class, 'boaantidoping'])->name('boaantidoping');
+Route::get('/athletes', [FrontendController::class, 'athletes'])->name('athletes');
+Route::get('/nationalsportsawards', [FrontendController::class, 'nationalsportsawards'])->name('nationalsportsawards');
+Route::get('/regionalsportsawards', [FrontendController::class, 'regionalsportsawards'])->name('regionalsportsawards');
+Route::get('/internationalsportsawards', [FrontendController::class, 'internationalsportsawards'])->name('internationalsportsawards');
+Route::get('/affiliated', [FrontendController::class, 'affiliated'])->name('affiliated');
+Route::get('/activities', [FrontendController::class, 'activities'])->name('activities');
 
 
 

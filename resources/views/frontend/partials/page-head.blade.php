@@ -95,10 +95,10 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="affiliated.php">Affiliated Organizations</a></li>
-                            <li><a href="activities.php">Activities</a></li>
+                            <li><a href="{{route('affiliated')}}">Affiliated Organizations</a></li>
+                            <li><a href="{{route('activities')}}">Activities</a></li>
                             <li class="current">
-                            	<a href="">Games & Results</a>
+                            	<a href="javascript:void(0)">Games & Results</a>
                             	<ul class="sub-current">
                                     <li>
                                         <a href="national.php">National</a>
@@ -112,18 +112,18 @@
                             	<a href="">Sports Awards</a>
                             	<ul class="sub-current">
                                 	<li>
-                                        <a href="internationalsportsawards.php">International</a>
+                                        <a href="{{route('internationalsportsawards')}}">International</a>
                                     </li>
                                     <li>
-                                        <a href="regionalsportsawards.php">Regional</a>
+                                        <a href="{{route('regionalsportsawards')}}">Regional</a>
                                     </li>
                                     <li>
-                                        <a href="nationalsportsawards.php">National</a>
+                                        <a href="{{route('nationalsportsawards')}}">National</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="athletes.php">BOA Athletes Commission</a></li> 
-                            <li><a href="boaantidoping.php">BOA Anti-Doping</a></li> 
+                            <li><a href="{{route('athletes')}}">BOA Athletes Commission</a></li> 
+                            <li><a href="{{route('boaantidoping')}}">BOA Anti-Doping</a></li> 
                             <li><a href="{{route('noa')}}">National Olympic Academy (NOA)</a></li> 
                             <li><a href="{{route('19asiangames')}}">19th Asian Games</a></li>
                             <li><a href="{{route('boaelec2021')}}">BOA Election</a></li>
