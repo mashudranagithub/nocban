@@ -48,7 +48,7 @@
                         <div class="row">
                             <!-- Logo-->
                             <div class="col-md-12 logo text-center">
-                                <a href="index.php" title="Return Home">                            
+                                <a href="{{route('homepage')}}" title="Return Home">                            
                                     <img src="{{ asset('frontend/assets/img/logo.png') }}" alt="Logo" class="logo_img">
                                 </a>
                             </div>
@@ -63,7 +63,7 @@
                     <div class="container">
                         <!-- Menu-->
                         <ul class="sf-menu" id="menu">
-                            <li class="selected"><a href="index.php">Home</a></li>                                
+                            <li class="selected"><a href="{{route('homepage')}}">Home</a></li>                                
                             <li>
                                 <a href="">About BOA</a>
                                 <div class="sf-mega">

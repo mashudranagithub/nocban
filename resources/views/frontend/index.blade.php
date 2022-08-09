@@ -173,7 +173,7 @@
                         <!-- Item clubs --> 
                         <li class="col-sm-4">
                             <div class="header-post">
-                                <a href="#"><img src="{{ asset('frontend/assets/uploads/gallery/thumbs/55.jpg') }}" alt="National Olympic Academy Photo Gallery"></a>
+                                <a href="#"><img src="{{ asset('frontend/assets/uploads/gallery/1.jpg') }}" alt="National Olympic Academy Photo Gallery"></a>
                             </div>
                             <div class="info-post">
                                 <h4><a href="#">National Olympic Academy Photo Gallery</a></h4>
@@ -184,7 +184,7 @@
                         <!-- Item clubs --> 
                         <li class="col-sm-4">
                             <div class="header-post">
-                                <a href="#"><img src="{{ asset('frontend/assets/uploads/gallery/thumbs/55.jpg') }}" alt="National Olympic Academy Photo Gallery"></a>
+                                <a href="#"><img src="{{ asset('frontend/assets/uploads/gallery/2.jpg') }}" alt="National Olympic Academy Photo Gallery"></a>
                             </div>
                             <div class="info-post">
                                 <h4><a href="#">National Olympic Academy Photo Gallery</a></h4>
@@ -195,7 +195,7 @@
                         <!-- Item clubs --> 
                         <li class="col-sm-4">
                             <div class="header-post">
-                                <a href="#"><img src="{{ asset('frontend/assets/uploads/gallery/thumbs/55.jpg') }}" alt="National Olympic Academy Photo Gallery"></a>
+                                <a href="#"><img src="{{ asset('frontend/assets/uploads/gallery/3.jpg') }}" alt="National Olympic Academy Photo Gallery"></a>
                             </div>
                             <div class="info-post">
                                 <h4><a href="#">National Olympic Academy Photo Gallery</a></h4>
@@ -267,7 +267,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="img-hover">
-                            <img src="{{ asset('frontend/assets/uploads/post/thumbs/20170430_172825.jpg') }}" alt="Official Photo Session of Bangladesh Contingent for 4th Islamic Solidarity Games" class="img-responsive">
+                            <img src="{{ asset('frontend/assets/uploads/post/thumbs/konya2021.jpg') }}" alt="Official Photo Session of Bangladesh Contingent for 4th Islamic Solidarity Games" class="img-responsive">
                                <div class="overlay"><a href="post.php">+</a></div>
                             </div>
                         </div>
@@ -287,7 +287,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="img-hover">
-                            <img src="{{ asset('frontend/assets/uploads/post/thumbs/20170430_172825.jpg') }}" alt="Official Photo Session of Bangladesh Contingent for 4th Islamic Solidarity Games" class="img-responsive">
+                            <img src="{{ asset('frontend/assets/uploads/post/thumbs/konya2021.jpg') }}" alt="Official Photo Session of Bangladesh Contingent for 4th Islamic Solidarity Games" class="img-responsive">
                                <div class="overlay"><a href="post.php">+</a></div>
                             </div>
                         </div>
