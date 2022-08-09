@@ -1,5 +1,6 @@
-<?php include('components/page-head.php'); ?>
+@extends('frontend.layouts.master')
 
+@section('content')
 <!-- Section Title -->           
 <section class="section-title img-about">
     <div class="overlay-bg"></div>
@@ -103,4 +104,4 @@
 </section>
 <!-- End Section Area - Content Central -->
 
-<?php include('components/page-tail.php'); ?>
+@endsection

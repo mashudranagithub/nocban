@@ -92,6 +92,28 @@ Route::group(['middleware' => ['auth']], function() {
 });
 
 Route::get('/', [FrontendController::class, 'homepage'])->name('homepage');
+Route::get('/contact', [FrontendController::class, 'contactpage'])->name('contactpage');
+Route::get('/esportsroad', [FrontendController::class, 'esportsroad'])->name('esportsroad');
+Route::get('/boaelec2021', [FrontendController::class, 'boaelec2021'])->name('boaelec2021');
+Route::get('/19asiangames', [FrontendController::class, 'asiangames19'])->name('19asiangames');
+Route::get('/noa', [FrontendController::class, 'noa'])->name('noa');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Route::get('/local-photo-gallery', [FrontendController::class, 'localPhotoGallery'])->name('localPhotoGallery');
 Route::get('/national-photo-gallery', [FrontendController::class, 'nationalPhotoGallery'])->name('nationalPhotoGallery');

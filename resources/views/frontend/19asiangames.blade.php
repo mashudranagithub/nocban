@@ -1,4 +1,6 @@
-<?php include('components/page-head.php'); ?>
+@extends('frontend.layouts.master')
+
+@section('content')
 
 <style>
     .fancybox-overlay-fixed {
@@ -21,7 +23,7 @@
     <div class="crumbs">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
                 <li>19th Asian Games</li>                                       
             </ul>
@@ -29,7 +31,7 @@
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="assets/img/img-theme/shp.png" class="img-responsive" alt="">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="">
     </div>
 
     <!-- Content Central -->
@@ -42,7 +44,7 @@
             <!-- Item -->
             <div class="col-xs-6 col-sm-6 col-md-4 soccer">
                 <div class="img-hover">
-                    <a href="assets/img/19thasiangames/1.jpg" class="fancybox"><img src="assets/img/19thasiangames/1.jpg" alt="" class="img-responsive"></a>
+                    <a href="{{asset('frontend/assets/img/19thasiangames/1.jpg')}}" class="fancybox"><img src="{{asset('frontend/assets/img/19thasiangames/1.jpg')}}" alt="" class="img-responsive"></a>
                 </div>                
                 <p class="text-center">Holding the Invitation Letter-Mr. Syed Shahed Reza, NOC Secretary General and Mr. Fakhruddin Haider, NOC Director General</p>
             </div>
@@ -51,7 +53,7 @@
             <!-- Item -->
             <div class="col-xs-6 col-sm-6 col-md-4 soccer">
                 <div class="img-hover">
-                    <a href="assets/img/19thasiangames/2.jpg" class="fancybox"><img src="assets/img/19thasiangames/2.jpg" alt="" class="img-responsive"></a>
+                    <a href="{{asset('frontend/assets/img/19thasiangames/2.jpg')}}" class="fancybox"><img src="{{asset('frontend/assets/img/19thasiangames/2.jpg')}}" alt="" class="img-responsive"></a>
                 </div>                
                 <p class="text-center">Holding the Mascots-Mr. Syed Shahed Reza, NOC Secretary General and Mr. Fakhruddin Haider, NOC Director General</p>
             </div>
@@ -60,7 +62,7 @@
             <!-- Item -->
             <div class="col-xs-6 col-sm-6 col-md-4 soccer">
                 <div class="img-hover">
-                    <a href="assets/img/19thasiangames/3.jpg" class="fancybox"><img src="assets/img/19thasiangames/3.jpg" alt="" class="img-responsive"></a>
+                    <a href="{{asset('frontend/assets/img/19thasiangames/3.jpg')}}" class="fancybox"><img src="{{asset('frontend/assets/img/19thasiangames/3.jpg')}}" alt="" class="img-responsive"></a>
                 </div>                
                 <p class="text-center">CDM Seminar Banner</p>
             </div>
@@ -75,4 +77,4 @@
 </section>
 <!-- End Section Area - Content Central -->
 
-<?php include('components/page-tail.php'); ?>
+@endsection

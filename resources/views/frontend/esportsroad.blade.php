@@ -1,4 +1,6 @@
-<?php include('components/page-head.php'); ?>
+@extends('frontend.layouts.master')
+
+@section('content')
 
 <!-- Section Title -->           
 <section class="section-title img-about">
@@ -15,19 +17,19 @@
     <div class="crumbs">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
-                <li><a href="esportsroad.php">Esports-Road to Asian Games 2022</a> </li>  
+                <li><a href="{{route('esportsroad')}}">Esports-Road to Asian Games 2022</a> </li>  
                 <li>/</li>
                 
-                <?php include('components/back-button.php'); ?>
+                @include('frontend.partials.back-button')
                 
             </ul>
         </div>        
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="assets/img/img-theme/shp.png" class="img-responsive" alt="">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="">
     </div>
 
     <!-- Content Central -->
@@ -63,13 +65,13 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>1</td>
-                                                        <td><a target="_blank" href="assets/esportsroad/FIFA-22-Asian-Games-2022-Qualifying-Process.pdf">FIFA 22 Asian Games 2022 Qualifying Process</a></td>
-                                                        <td><a target="_blank" href="assets/esportsroad/FIFA-22-Asian-Games-2022-Qualifying-Process.pdf"><i class="fa fa-eye"></i></a></td>
+                                                        <td><a target="_blank" href="{{asset('frontend/assets/esportsroad/FIFA-22-Asian-Games-2022-Qualifying-Process.pdf')}}">FIFA 22 Asian Games 2022 Qualifying Process</a></td>
+                                                        <td><a target="_blank" href="{{asset('frontend/assets/esportsroad/FIFA-22-Asian-Games-2022-Qualifying-Process.pdf')}}"><i class="fa fa-eye"></i></a></td>
                                                     </tr>
                                                     <tr>
                                                         <td>1</td>
-                                                        <td><a target="_blank" href="assets/esportsroad/Hearthstone-Asian-Games-2022-Qualifying-Process.pdf">[Hearthstone] Asian Games 2022 - Qualifying Process</a></td>
-                                                        <td><a target="_blank" href="assets/esportsroad/Hearthstone-Asian-Games-2022-Qualifying-Process.pdf"><i class="fa fa-eye"></i></a></td>
+                                                        <td><a target="_blank" href="{{asset('frontend/assets/esportsroad/Hearthstone-Asian-Games-2022-Qualifying-Process.pdf')}}">[Hearthstone] Asian Games 2022 - Qualifying Process</a></td>
+                                                        <td><a target="_blank" href="{{asset('frontend/assets/esportsroad/Hearthstone-Asian-Games-2022-Qualifying-Process.pdf')}}"><i class="fa fa-eye"></i></a></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -97,4 +99,4 @@
 </section>
 <!-- End Section Area - Content Central -->
 
-<?php include('components/page-tail.php'); ?>
+@endsection

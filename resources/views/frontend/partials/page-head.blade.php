@@ -124,11 +124,11 @@
                             </li>
                             <li><a href="athletes.php">BOA Athletes Commission</a></li> 
                             <li><a href="boaantidoping.php">BOA Anti-Doping</a></li> 
-                            <li><a href="noa.php">National Olympic Academy (NOA)</a></li> 
-                            <li><a href="19asiangames.php">19th Asian Games</a></li>
-                            <li><a href="boaelec2021.php">BOA Election</a></li>
-                            <li><a href="esportsroad.php">Esports-Road to Asian Games 2022</a></li>
-                            <li><a href="contact.php">Contact Us</a></li> 
+                            <li><a href="{{route('noa')}}">National Olympic Academy (NOA)</a></li> 
+                            <li><a href="{{route('19asiangames')}}">19th Asian Games</a></li>
+                            <li><a href="{{route('boaelec2021')}}">BOA Election</a></li>
+                            <li><a href="{{route('esportsroad')}}">Esports-Road to Asian Games 2022</a></li>
+                            <li><a href="{{route('contactpage')}}">Contact Us</a></li> 
                         </ul>
                         <!-- End Menu-->
                     </div>

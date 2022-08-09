@@ -73,6 +73,42 @@ class FrontendController extends Controller
         return view('frontend.index');
     }
 
+    public function contactpage(){
+        return view('frontend.contact');
+    }
+
+    public function esportsroad(){
+        return view('frontend.esportsroad');
+    }
+
+    public function boaelec2021(){
+        return view('frontend.boaelec2021');
+    }
+
+    public function asiangames19(){
+        return view('frontend.19asiangames');
+    }
+
+    public function noa(){
+        return view('frontend.noa');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function newses() {
         $settings = Settings::first();
         $newses = News::where('status', 1)->orderBy('created_at', 'desc')->paginate(10);

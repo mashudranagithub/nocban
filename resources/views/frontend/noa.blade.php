@@ -1,4 +1,6 @@
-<?php include('components/page-head.php'); ?>
+@extends('frontend.layouts.master')
+
+@section('content')
 
 <!-- Section Title -->           
 <section class="section-title img-about">
@@ -15,7 +17,7 @@
     <div class="crumbs">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
                 <li>National Olympic Academy</li>                                       
             </ul>
@@ -23,7 +25,7 @@
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="assets/img/img-theme/shp.png" class="img-responsive" alt="">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="">
     </div>
 
     <!-- Content Central -->
@@ -35,13 +37,13 @@
                 <!-- Info -->
                 <div class="panel-box">
                     <div class="titles">
-                        <h4><i class="fa fa-rocket"></i><a target="_blank" href="assets/pdf/NOA Management Committee List_Photo+Phone.pdf">NOA Management Committee List</a></h4>
-                        <h4><i class="fa fa-rocket"></i><a target="_blank" href="assets/pdf/NOA Constitution.pdf">NOA Constitution</a></h4>
+                        <h4><i class="fa fa-rocket"></i><a target="_blank" href="{{asset('frontend/assets/pdf/NOA_m_c_List_Photo_Phone.pdf')}}">NOA Management Committee List</a></h4>
+                        <h4><i class="fa fa-rocket"></i><a target="_blank" href="{{asset('frontend/assets/pdf/NOA-Constitution.pdf')}}">NOA Constitution</a></h4>
                     </div>
                     <!-- Info ABout --> 
                     <div class="row">
                         <div class="col-md-12">
-                          <!--  <a href="../../pdf/NOA Management Committee List_Photo+Phone.pdf">NOA Management Committee List</a>-->
+                          
                         </div>
                     </div>
                     <!-- End Info ABout --> 
@@ -57,4 +59,4 @@
 </section>
 <!-- End Section Area - Content Central -->
 
-<?php include('components/page-tail.php'); ?>
+@endsection
