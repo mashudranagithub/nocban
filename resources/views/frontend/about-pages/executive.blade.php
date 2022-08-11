@@ -1,4 +1,6 @@
-<?php include('components/page-head.php'); ?>
+@extends('frontend.layouts.master')
+
+@section('content')
 
 <!-- Section Title -->           
 <section class="section-title img-about">
@@ -15,7 +17,7 @@
     <div class="crumbs">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
                 <li>Executive Committee</li>                                       
             </ul>
@@ -23,7 +25,7 @@
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="assets/img/img-theme/shp.png" class="img-responsive" alt="">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="">
     </div>
 
     <!-- Content Central -->
@@ -42,11 +44,10 @@
                         <div class="col-md-12">
                             <h4>Elected Executive Committee of BOA 2021</h4>
                                                                     
-							</br>
+							<br>
 							
-							<iframe src="assets/pdf/BOA EC List 2021_English.pdf" frameborder="0" scrolling="no" width="100%" height="800px;"></iframe>
+							<iframe src="{{asset('frontend/assets/pdf/BOA_EC_List_2021_English.pdf')}}" frameborder="0" scrolling="no" width="100%" height="800px;"></iframe>
 
-                            
                         </div>
                     </div>
                     <!-- End Info ABout --> 
@@ -62,4 +63,4 @@
 </section>
 <!-- End Section Area - Content Central -->
 
-<?php include('components/page-tail.php'); ?>
+@endsection

@@ -74,51 +74,63 @@ class FrontendController extends Controller
     }
 
     public function contactpage(){
-        return view('frontend.contact');
+        return view('frontend.pages.contact');
     }
 
     public function esportsroad(){
-        return view('frontend.esportsroad');
+        return view('frontend.pages.esportsroad');
     }
 
     public function boaelec2021(){
-        return view('frontend.boaelec2021');
+        return view('frontend.pages.boaelec2021');
     }
 
     public function asiangames19(){
-        return view('frontend.19asiangames');
+        return view('frontend.pages.19asiangames');
     }
 
     public function noa(){
-        return view('frontend.noa');
+        return view('frontend.pages.noa');
     }
 
     public function boaantidoping(){
-        return view('frontend.boaantidoping');
+        return view('frontend.pages.boaantidoping');
     }
 
     public function athletes(){
-        return view('frontend.athletes');
+        return view('frontend.pages.athletes');
     }
 
     public function nationalsportsawards(){
-        return view('frontend.nationalsportsawards');
+        return view('frontend.sports-awards.nationalsportsawards');
     }
 
     public function regionalsportsawards(){
-        return view('frontend.regionalsportsawards');
+        return view('frontend.sports-awards.regionalsportsawards');
     }
 
     public function internationalsportsawards(){
-        return view('frontend.internationalsportsawards');
+        return view('frontend.sports-awards.internationalsportsawards');
     }
 
     public function affiliated(){
-        return view('frontend.affiliated');
+        return view('frontend.pages.affiliated');
     }
 
     public function activities(){
-        return view('frontend.activities');
+        return view('frontend.pages.activities');
+    }
+
+    public function history(){
+        return view('frontend.about-pages.history');
+    }
+
+    public function mission(){
+        return view('frontend.about-pages.mission');
+    }
+
+    public function executive(){
+        return view('frontend.about-pages.executive');
     }
 
 
@@ -526,35 +538,6 @@ class FrontendController extends Controller
             'ranking_national_open',
             'ranking_national_youth',
             'message'
-        ));
-    }
-
-    public function history() {
-        $settings = Settings::first();
-        $vision_mission = FilePost::where('category', '=', "vision-mission")->where('status', '=', 1)->get('file');
-        $executive_committee = FilePost::where('category', '=', "executive-committee")->where('status', '=', 1)->get('file');
-        $sub_committee = FilePost::where('category', '=', "sub-committee")->where('status', '=', 1)->get('file');
-        $office_staffs = FilePost::where('category', '=', "office-staffs")->where('status', '=', 1)->get('file');
-        $coaches = FilePost::where('category', '=', "coaches")->where('status', '=', 1)->get('file');
-        $judges = FilePost::where('category', '=', "judges")->where('status', '=', 1)->get('file');
-        $event_calendar = FilePost::where('category', '=', "event-calendar")->where('status', '=', 1)->get('file');
-        $ranking_national_open = FilePost::where('category', '=', "ranking-national-open")->where('status', '=', 1)->get('file');
-        $ranking_national_youth = FilePost::where('category', '=', "ranking-national-youth")->where('status', '=', 1)->get('file');
-        $history = Post::where('category', '=', "history")->where('status', '=', 1)->orderBy('created_at', 'DESC')
-        ->first();
-
-        return view('frontend.about.history', compact(
-            'settings',
-            'vision_mission',
-            'executive_committee',
-            'sub_committee',
-            'office_staffs',
-            'coaches',
-            'judges',
-            'event_calendar',
-            'ranking_national_open',
-            'ranking_national_youth',
-            'history'
         ));
     }
 

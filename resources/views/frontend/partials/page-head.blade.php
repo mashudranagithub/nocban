@@ -69,9 +69,9 @@
                                 <div class="sf-mega">
                                     <div class="col-md-4">
                                         <ul>                                                
-                                            <li><a href="history.php">History</a></li>
-                                            <li><a href="mission.php">Mission & Vision</a></li>
-                                            <li><a href="executive.php">Executive Committee</a></li>
+                                            <li><a href="{{route('history')}}">History</a></li>
+                                            <li><a href="{{route('mission')}}">Mission & Vision</a></li>
+                                            <li><a href="{{route('executive')}}">Executive Committee</a></li>
                                             <li><a href="general.php">General Assembly</a></li>
                                         </ul>
                                     </div>
@@ -98,7 +98,7 @@
                             <li><a href="{{route('affiliated')}}">Affiliated Organizations</a></li>
                             <li><a href="{{route('activities')}}">Activities</a></li>
                             <li class="current">
-                            	<a href="javascript:void(0)">Games & Results</a>
+                            	<a href="javascript:void(0);">Games & Results</a>
                             	<ul class="sub-current">
                                     <li>
                                         <a href="national.php">National</a>
@@ -109,7 +109,7 @@
                                 </ul>
                             </li>
                             <li class="current">
-                            	<a href="">Sports Awards</a>
+                            	<a href="javascript:void(0);">Sports Awards</a>
                             	<ul class="sub-current">
                                 	<li>
                                         <a href="{{route('internationalsportsawards')}}">International</a>

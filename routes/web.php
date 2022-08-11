@@ -104,6 +104,23 @@ Route::get('/regionalsportsawards', [FrontendController::class, 'regionalsportsa
 Route::get('/internationalsportsawards', [FrontendController::class, 'internationalsportsawards'])->name('internationalsportsawards');
 Route::get('/affiliated', [FrontendController::class, 'affiliated'])->name('affiliated');
 Route::get('/activities', [FrontendController::class, 'activities'])->name('activities');
+Route::get('/history', [FrontendController::class, 'history'])->name('history');
+Route::get('/mission', [FrontendController::class, 'mission'])->name('mission');
+Route::get('/executive', [FrontendController::class, 'executive'])->name('executive');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -133,7 +150,7 @@ Route::get('/international-video-gallery', [FrontendController::class, 'internat
 Route::get('/single-video-gallery/{id}', [FrontendController::class, 'singleVideoGallery'])->name('singleVideoGallery');
 
 Route::get('/message', [FrontendController::class, 'message'])->name('message');
-Route::get('/history', [FrontendController::class, 'history'])->name('history');
+
 
 Route::get('/activities/proposed', [FrontendController::class, 'proposedActivities'])->name('proposedActivities');
 Route::get('/activities/completed', [FrontendController::class, 'completedActivities'])->name('completedActivities');

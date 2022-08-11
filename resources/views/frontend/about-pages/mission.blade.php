@@ -1,4 +1,6 @@
-<?php include('components/page-head.php'); ?>
+@extends('frontend.layouts.master')
+
+@section('content')
 
 <!-- Section Title -->           
 <section class="section-title img-about">
@@ -15,7 +17,7 @@
     <div class="crumbs">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
                 <li>Mission & Vision</li>                                       
             </ul>
@@ -23,7 +25,7 @@
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="assets/img/img-theme/shp.png" class="img-responsive" alt="">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="">
     </div>
 
     <!-- Content Central -->
@@ -49,8 +51,8 @@
                             <h4>ROLE</h4>
 
                             <ul>
-                                    <li>To promote the fundamental principles and values of Olympism in Bangladesh, in particular, in the fields of sport and education, by promoting Olympic educational programs in all levels of schools, sports and physical education institutions and universities, as well as by encouraging the creation of institutions dedicated to Olympic education, such as National Olympic Academy, Olympic Museum and other programs, including cultural, related to the Olympic Movement.</li>
-                                                                            <li>To ensure the observance of the Olympic Charter in Bangladesh.</li>
+                                <li>To promote the fundamental principles and values of Olympism in Bangladesh, in particular, in the fields of sport and education, by promoting Olympic educational programs in all levels of schools, sports and physical education institutions and universities, as well as by encouraging the creation of institutions dedicated to Olympic education, such as National Olympic Academy, Olympic Museum and other programs, including cultural, related to the Olympic Movement.</li>
+                                <li>To ensure the observance of the Olympic Charter in Bangladesh.</li>
                                 <li>To encourage the development of high performance sport as well as sport for all.</li>
                                 <li>To help train the Sports Administrators by National Course Directors.</li>
                                 <li>To take action against any form of discrimination and violence in sport.</li>
@@ -60,7 +62,7 @@
 
                             <h4>GOALS</h4>
                             <ul>
-                                    <li>To take a leadership role in the development of sports and sportsmanship.</li>
+                                <li>To take a leadership role in the development of sports and sportsmanship.</li>
                                 <li>To create a passion for sports and physical activities among the citizens of Bangladesh.</li>
                                 <li>To enlighten the nation with the values of Olympism.</li>
                                 <li>To maintain a sporting environment free of any kind of discrimination, violence and doping issues.</li>
@@ -75,7 +77,7 @@
                             <p>Bangladesh Olympic Association maintains the following values in its all activities – </p>
 
                             <ul>
-                                    <li>Transparency</li>
+                                <li>Transparency</li>
                                 <li>Accountability</li>
                                 <li>Autonomy</li>
                                 <li>Ethical Conduct</li>
@@ -96,4 +98,4 @@
 </section>
 <!-- End Section Area - Content Central -->
 
-<?php include('components/page-tail.php'); ?>
+@endsection
