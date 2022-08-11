@@ -1,4 +1,6 @@
-<?php include('components/page-head.php'); ?>
+@extends('frontend.layouts.master')
+
+@section('content')
 
 <!-- Section Title -->           
 <section class="section-title img-about">
@@ -15,7 +17,7 @@
     <div class="crumbs">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
                 <li>General Assembly</li>                                       
             </ul>
@@ -23,7 +25,7 @@
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="assets/img/img-theme/shp.png" class="img-responsive" alt="">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="">
     </div>
 
     <!-- Content Central -->
@@ -40,9 +42,9 @@
                     <!-- Info ABout --> 
                     <div class="row">
                         <div class="col-md-12">
-                                                                    <p>The General Assembly is on the top of the BOA organizational hierarchy. The General Assembly ofBOA is composed of the following councilors:</p>
+                            <p>The General Assembly is on the top of the BOA organizational hierarchy. The General Assembly ofBOA is composed of the following councilors:</p>
                             <ul>
-                                    <li>Two representatives from each 23 National Federation (NF)s affiliated with the International Federations which are included in the Olympic Games. The number of NF is subject to change.</li>
+                                <li>Two representatives from each 23 National Federation (NF)s affiliated with the International Federations which are included in the Olympic Games. The number of NF is subject to change.</li>
                                 <li>Representatives from maximum three sports disciplines, which are not included in the Olympic Games, but recognized by BOA. These sports disciplines will be decided by Executive Committee of BOA.</li>
                                 <li>President and General Secretary from Bangladesh Women Sports Association</li>
                                 <li>Representatives from seven Divisional Sports Association (DSA)</li>
@@ -54,7 +56,7 @@
                                 <li>Elected member of IOC (If available, as per IOC Charter 16.1.1.1)</li>
                                 <li>Director General, BOA (Ex-officio with no voting right)</li>
                                 <li>Representative from Ministry of Law and Parliamentary Affairs (not below than the rank and status of Deputy Secretary and must have Post Graduate Degree in Law; with no voting right)</li>
-                                <li>Representative from Ministry of Finance (not below the rank and status of Deputy Secretary (with no voting right)</li>
+                                <li>Representative from Ministry of Finance not below the rank and status of Deputy Secretary (with no voting right)</li>
                                 <li>Representative from Ministry of Youth and Sports (not below the rank and status of  Deputy Secretary)</li>
                                 <li>Representative from Inter University (Public) Sports Board (with no voting right)</li>
                                 <li>Paralympic Association/Organization (Approved by EC)</li>
@@ -80,4 +82,4 @@
 </section>
 <!-- End Section Area - Content Central -->
 
-<?php include('components/page-tail.php'); ?>
+@endsection

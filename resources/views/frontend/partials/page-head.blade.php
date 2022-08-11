@@ -72,13 +72,13 @@
                                             <li><a href="{{route('history')}}">History</a></li>
                                             <li><a href="{{route('mission')}}">Mission & Vision</a></li>
                                             <li><a href="{{route('executive')}}">Executive Committee</a></li>
-                                            <li><a href="general.php">General Assembly</a></li>
+                                            <li><a href="{{route('general')}}">General Assembly</a></li>
                                         </ul>
                                     </div>
 
                                     <div class="col-md-4">
                                         <ul>                                                
-                                            <li><a href="previous.php">Previous President & SG</a></li>
+                                            <li><a href="{{route('previous')}}">Previous President & SG</a></li>
                                             <li><a href="administration.php">Administration</a></li>
                                             <li><a href="committees.php">Commissions & Committees</a></li>
                                             <li><a href="noa.php">National Olympic Academy</a></li>

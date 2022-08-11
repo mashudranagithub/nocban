@@ -133,6 +133,14 @@ class FrontendController extends Controller
         return view('frontend.about-pages.executive');
     }
 
+    public function general(){
+        return view('frontend.about-pages.general');
+    }
+
+    public function previous(){
+        return view('frontend.about-pages.previous');
+    }
+
 
 
 

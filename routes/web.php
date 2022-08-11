@@ -107,6 +107,8 @@ Route::get('/activities', [FrontendController::class, 'activities'])->name('acti
 Route::get('/history', [FrontendController::class, 'history'])->name('history');
 Route::get('/mission', [FrontendController::class, 'mission'])->name('mission');
 Route::get('/executive', [FrontendController::class, 'executive'])->name('executive');
+Route::get('/general', [FrontendController::class, 'general'])->name('general');
+Route::get('/previous', [FrontendController::class, 'previous'])->name('previous');
 
 
 
