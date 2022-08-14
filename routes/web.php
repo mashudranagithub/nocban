@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
+
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\SlidersController;
@@ -109,6 +110,23 @@ Route::get('/mission', [FrontendController::class, 'mission'])->name('mission');
 Route::get('/executive', [FrontendController::class, 'executive'])->name('executive');
 Route::get('/general', [FrontendController::class, 'general'])->name('general');
 Route::get('/previous', [FrontendController::class, 'previous'])->name('previous');
+Route::get('/administration', [FrontendController::class, 'administration'])->name('administration');
+Route::get('/committees', [FrontendController::class, 'committees'])->name('committees');
+Route::get('/constitution', [FrontendController::class, 'constitution'])->name('constitution');
+Route::get('/organogram', [FrontendController::class, 'organogram'])->name('organogram');
+Route::get('/doping', [FrontendController::class, 'doping'])->name('doping');
+Route::get('/athleteProfiles', [FrontendController::class, 'athleteProfiles'])->name('athleteProfiles');
+
+Route::get('/international', [FrontendController::class, 'international'])->name('international');
+
+
+Route::get('/national', [FrontendController::class, 'national'])->name('national');
+Route::get('/8bangladeshgames', [FrontendController::class, 'bangladeshgames8'])->name('8bangladeshgames');
+Route::get('/9bangladeshgames', [FrontendController::class, 'bangladeshgames9'])->name('9bangladeshgames');
+Route::get('/dolpodoktalika', [FrontendController::class, 'dolpodoktalika'])->name('dolpodoktalika');
+
+Route::get('/dpodoktalika', [FrontendController::class, 'dpodoktalika'])->name('dpodoktalika');
+
 
 
 

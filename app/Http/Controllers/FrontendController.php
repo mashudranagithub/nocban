@@ -141,6 +141,54 @@ class FrontendController extends Controller
         return view('frontend.about-pages.previous');
     }
 
+    public function administration(){
+        return view('frontend.about-pages.administration');
+    }
+
+    public function committees(){
+        return view('frontend.about-pages.committees');
+    }
+
+    public function constitution(){
+        return view('frontend.about-pages.constitution');
+    }
+
+    public function organogram(){
+        return view('frontend.about-pages.organogram');
+    }
+
+    public function doping(){
+        return view('frontend.about-pages.doping');
+    }
+
+    public function athleteProfiles(){
+        return view('frontend.about-pages.athleteProfiles');
+    }
+
+    public function international(){
+        return view('frontend.games-results.international.international');
+    }
+
+    public function national(){
+        return view('frontend.games-results.national.national');
+    }
+
+    public function bangladeshgames8(){
+        return view('frontend.games-results.national.8bangladeshgames');
+    }
+
+    public function bangladeshgames9(){
+        return view('frontend.games-results.national.9bangladeshgames');
+    }
+
+    public function dolpodoktalika(){
+        return view('frontend.games-results.national.dolpodoktalika');
+    }
+
+    public function dpodoktalika(){
+        return view('frontend.games-results.national.dpodoktalika');
+    }
+
 
 
 

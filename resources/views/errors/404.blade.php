@@ -11,7 +11,7 @@
         <div class="alert alert-danger text-center">
             <h2 class="display-3">404</h2>
             <p class="display-5">Oops! Something is wrong.</p>
-            <a href="{{url('/homepage')}}">Home</a>
+            <a href="{{url('/')}}">Home</a>
         </div>
     </div>
 </body>

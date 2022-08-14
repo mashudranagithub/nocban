@@ -1,10 +1,12 @@
-<?php include('components/page-head.php'); ?>
+@extends('frontend.layouts.master')
+
+@section('content')
 
 <!-- Section Title -->           
 <section class="section-title img-about">
     <div class="overlay-bg"></div>
     <div class="container">
-        <h1>Constitution</h1>
+        <h1>Anti Doping</h1>
     </div>
 </section>
 <!-- End Section Title --> 
@@ -15,15 +17,15 @@
     <div class="crumbs">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
-                <li>Constitution</li>                                       
+                <li>Anti Doping</li>                                       
             </ul>
         </div>        
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="assets/img/img-theme/shp.png" class="img-responsive" alt="">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="">
     </div>
 
     <!-- Content Central -->
@@ -35,18 +37,12 @@
                 <!-- Info -->
                 <div class="panel-box">
                     <div class="titles">
-                        <h4><i class="fa fa-rocket"></i>Constitution</h4>
+                        <h4><i class="fa fa-rocket"></i>Anti Doping</h4>
                     </div>
                     <!-- Info ABout --> 
                     <div class="row">
                         <div class="col-md-12">
-                            <object width="100%" height="750" data="assets/img/statutesoftheBangladeshOlympicAssociation.compressed.pdf"></object>
- 
-				  <p>It appears you don't have a PDF plugin for this browser.
-				  No biggie... you can <a href="assets/img/statutesoftheBangladeshOlympicAssociation.compressed.pdf">click here to
-				  download the PDF file.</a></p>
-				  
-				</object>
+                            <embed src="{{asset('frontend/assets/uploads/post/GO_13th_South_Asian_Games_2019.pdf')}}" width="100%" height="750" alt="pdf" >
                         </div>
                     </div>
                     <!-- End Info ABout --> 
@@ -62,4 +58,4 @@
 </section>
 <!-- End Section Area - Content Central -->
 
-<?php include('components/page-tail.php'); ?>
+@endsection

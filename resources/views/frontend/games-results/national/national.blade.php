@@ -1,4 +1,6 @@
-<?php include('components/page-head.php'); ?>
+@extends('frontend.layouts.master')
+
+@section('content')
 
 <!-- Section Title -->           
 <section class="section-title img-about">
@@ -15,19 +17,17 @@
     <div class="crumbs">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
                 <li>Games & Results</li>  
                 <li>/</li>
-                <li>National</li>  
-                <li>/</li>
-                <li>Bangabandhu 9th Bangladesh Games</li>                                        
+                <li>National</li>                                      
             </ul>
         </div>        
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="assets/img/img-theme/shp.png" class="img-responsive" alt="">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="">
     </div>
 
     <!-- Content Central -->
@@ -44,10 +44,10 @@
                     <!-- Info ABout --> 
                     <div class="row">
                         <div class="col-md-12">
-                            <h4><a href="dolpodoktalika.php">দলগত পদক তালিকা</a></h4>
+                            <h4><a href="{{route('9bangladeshgames')}}">Bangabandhu 9th Bangladesh Games</a></h4>
                         </div>
                         <div class="col-md-12">
-                            <h4><a href="dpodoktalika.php">ডিসিপ্লিন অনুযায়ী পদক তালিকা </a></h4>
+                            <h4><a href="{{route('8bangladeshgames')}}">8th Bangladesh Games</a></h4>
                         </div>
                     </div>
                     <!-- End Info ABout --> 
@@ -63,4 +63,4 @@
 </section>
 <!-- End Section Area - Content Central -->
 
-<?php include('components/page-tail.php'); ?>
+@endsection

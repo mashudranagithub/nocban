@@ -79,18 +79,18 @@
                                     <div class="col-md-4">
                                         <ul>                                                
                                             <li><a href="{{route('previous')}}">Previous President & SG</a></li>
-                                            <li><a href="administration.php">Administration</a></li>
-                                            <li><a href="committees.php">Commissions & Committees</a></li>
-                                            <li><a href="noa.php">National Olympic Academy</a></li>
+                                            <li><a href="{{route('administration')}}">Administration</a></li>
+                                            <li><a href="{{route('committees')}}">Commissions & Committees</a></li>
+                                            <li><a href="{{route('noa')}}">National Olympic Academy</a></li>
                                         </ul>
                                     </div>
 
                                     <div class="col-md-4">
                                         <ul>                                                
-                                            <li><a href="constitution.php">Constitution</a></li>
-                                            <li><a href="organogram.php">Organogram</a></li>
-                                            <li><a href="doping.php">Anti Doping</a></li>
-                                            <li><a href="athleteProfiles.php">Athlete Profiles</a></li>
+                                            <li><a href="{{route('constitution')}}">Constitution</a></li>
+                                            <li><a href="{{route('organogram')}}">Organogram</a></li>
+                                            <li><a href="{{route('doping')}}">Anti Doping</a></li>
+                                            <li><a href="{{route('athleteProfiles')}}">Athlete Profiles</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -101,10 +101,10 @@
                             	<a href="javascript:void(0);">Games & Results</a>
                             	<ul class="sub-current">
                                     <li>
-                                        <a href="national.php">National</a>
+                                        <a href="{{route('national')}}">National</a>
                                     </li>
                                     <li>
-                                        <a href="international.php">International</a>
+                                        <a href="{{route('international')}}">International</a>
                                     </li>
                                 </ul>
                             </li>

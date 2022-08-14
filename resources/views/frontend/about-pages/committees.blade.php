@@ -1,4 +1,6 @@
-<?php include('components/page-head.php'); ?>
+@extends('frontend.layouts.master')
+
+@section('content')
 
 <!-- Section Title -->           
 <section class="section-title img-about">
@@ -15,7 +17,7 @@
     <div class="crumbs">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
                 <li>Commissions &amp; Committees</li>                                       
             </ul>
@@ -23,7 +25,7 @@
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="assets/img/img-theme/shp.png" class="img-responsive" alt="">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="">
     </div>
 
     <!-- Content Central -->
@@ -40,16 +42,16 @@
                     <!-- Info ABout --> 
                     <div class="row">
                         <div class="col-md-12">
-                                                                    <h4>Commissions of BOA</h4>
+                            <h4>Commissions of BOA</h4>
                             <ul>
-                                    <li>Athlete Commission</li>
+                                <li>Athlete Commission</li>
                                 <li>Women Commission</li>
                             </ul>
 
                             <h4>Standing Committees of BOA</h4>
                             <p>The following Standing Committees perform the activities entrusted by BOA in an advisory capacity</p>
                             <ul>
-                                    <li>Administration and Purchase Committee</li>
+                                <li>Administration and Purchase Committee</li>
                                 <li>Appeal Committee</li>
                                 <li>Audit Committee</li>
                                 <li>Budget and Finance Committee</li>
@@ -78,4 +80,4 @@
 </section>
 <!-- End Section Area - Content Central -->
 
-<?php include('components/page-tail.php'); ?>
+@endsection

@@ -1,4 +1,6 @@
-<?php include('components/page-head.php'); ?>
+@extends('frontend.layouts.master')
+
+@section('content')
 
 <!-- Section Title -->           
 <section class="section-title img-about">
@@ -15,11 +17,11 @@
     <div class="crumbs">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
                 <li>Games & Results</li>  
                 <li>/</li>
-                <li><a href="national.php">National</a></li>  
+                <li><a href="{{route('national')}}">National</a></li>  
                 <li>/</li>
                 <li>Bangabandhu 9th Bangladesh Games</li>                                      
             </ul>
@@ -27,7 +29,7 @@
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="assets/img/img-theme/shp.png" class="img-responsive" alt="">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="">
     </div>
 
     <!-- Content Central -->
@@ -3324,7 +3326,7 @@
                                                       <td>০</td>
                                                       <td>০</td>
                                                     </tr>
-                                                                                      <tr><td colspan="6"><hr></td></tr>
+                                                    <tr><td colspan="6"><hr></td></tr>
                                       <tr>
                                           <td colspan="2" align="center">সর্ব মোট </td>
                                           <td>৩৮৩</td>
@@ -3351,4 +3353,4 @@
 </section>
 <!-- End Section Area - Content Central -->
 
-<?php include('components/page-tail.php'); ?>
+@endsection

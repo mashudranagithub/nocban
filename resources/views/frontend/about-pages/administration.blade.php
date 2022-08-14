@@ -1,4 +1,6 @@
-<?php include('components/page-head.php'); ?>
+@extends('frontend.layouts.master')
+
+@section('content')
 
 <!-- Section Title -->           
 <section class="section-title img-about">
@@ -15,7 +17,7 @@
     <div class="crumbs">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
                 <li>Administration</li>                                       
             </ul>
@@ -23,7 +25,7 @@
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="assets/img/img-theme/shp.png" class="img-responsive" alt="">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="">
     </div>
 
     <!-- Content Central -->
@@ -53,49 +55,49 @@
                                     <td>Brig Gen (Retd.) Fakhruddin Haider,ndu,psc</td>
                                     <td>Director General</td>
                                     <td>Cell No:01711531323, 9570505(Office)</td>
-                                    <td><img src="assets/img/administration/admin_1.jpg" width="100" class="img-thumbnail"></td>
+                                    <td><img src="{{asset('frontend/assets/img/administration/admin_1.jpg')}}" width="100" class="img-thumbnail"></td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>Md. Mahfuzur Rahman Siddique</td>
                                     <td>Director, National Olympic Academy</td>
                                     <td>Cell No: 01755534318</td>
-                                    <td><img src="assets/img/administration/admin_2.jpg" width="100" class="img-thumbnail"></td>
+                                    <td><img src="{{asset('frontend/assets/img/administration/admin_2.jpg')}}" width="100" class="img-thumbnail"></td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>Sayeed Ahmed Shahed</td>
                                     <td>DGM-Finance & Accounts</td>
                                     <td>Cell No:01713255030</td>
-                                    <td><img src="assets/img/administration/admin_3.jpg" width="100" class="img-thumbnail"></td>
+                                    <td><img src="{{asset('frontend/assets/img/administration/admin_3.jpg')}}" width="100" class="img-thumbnail"></td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>Mohammad Habibur Rahman</td>
                                     <td>Deputy Manager-Games & IR</td>
                                     <td>Cell No:01755534315</td>
-                                    <td><img src="assets/img/administration/admin_4.jpg" width="100" class="img-thumbnail"></td>
+                                    <td><img src="{{asset('frontend/assets/img/administration/admin_4.jpg')}}" width="100" class="img-thumbnail"></td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
                                     <td>Md. Rashed Ahmed Shams</td>
                                     <td>Assistant Manager-OS</td>
                                     <td>Cell No:01755534316</td>
-                                    <td><img src="assets/img/administration/admin_5.jpg" width="100" class="img-thumbnail"></td>
+                                    <td><img src="{{asset('frontend/assets/img/administration/admin_5.jpg')}}" width="100" class="img-thumbnail"></td>
                                 </tr>
                                 <tr>
                                     <td>6</td>
                                     <td>Md. Shohel Rana</td>
                                     <td>Assistant Manage-Accounts</td>
                                     <td>Cell No:01755534317</td>
-                                    <td><img src="assets/img/administration/admin_6.jpg" width="100" class="img-thumbnail"></td>
+                                    <td><img src="{{asset('frontend/assets/img/administration/admin_6.jpg')}}" width="100" class="img-thumbnail"></td>
                                 </tr>
                                 <tr>
                                     <td>7</td>
                                     <td>Md. Hafizul Islam</td>
                                     <td>Executive Officer</td>
                                     <td>Cell No:01713255034</td>
-                                    <td><img src="assets/img/administration/admin_07.jpg" width="100" class="img-thumbnail"></td>
+                                    <td><img src="{{asset('frontend/assets/img/administration/admin_07.jpg')}}" width="100" class="img-thumbnail"></td>
                                 </tr>
                             </table>                                        
                         </div>
@@ -113,4 +115,4 @@
 </section>
 <!-- End Section Area - Content Central -->
 
-<?php include('components/page-tail.php'); ?>
+@endsection
