@@ -130,10 +130,11 @@ Route::get('/childrenOfAsiaInternationalSportsGames', [FrontendController::class
 Route::get('/islamicSolidarityGames', [FrontendController::class, 'islamicSolidarityGames'])->name('islamicSolidarityGames');
 Route::get('/summerOlympicGames', [FrontendController::class, 'summerOlympicGames'])->name('summerOlympicGames');
 Route::get('/youthOlympicGames', [FrontendController::class, 'youthOlympicGames'])->name('youthOlympicGames');
+
 Route::get('/southAsianGames', [FrontendController::class, 'southAsianGames'])->name('southAsianGames');
 Route::get('/11thSouthAsianGames', [FrontendController::class, 'SouthAsianGames11th'])->name('11thSouthAsianGames');
-Route::get('/southAsianBeachGames', [FrontendController::class, 'southAsianBeachGames'])->name('southAsianBeachGames');
 
+Route::get('/southAsianBeachGames', [FrontendController::class, 'southAsianBeachGames'])->name('southAsianBeachGames');
 
 Route::get('/national', [FrontendController::class, 'national'])->name('national');
 Route::get('/8bangladeshgames', [FrontendController::class, 'bangladeshgames8'])->name('8bangladeshgames');
@@ -141,6 +142,38 @@ Route::get('/9bangladeshgames', [FrontendController::class, 'bangladeshgames9'])
 Route::get('/dolpodoktalika', [FrontendController::class, 'dolpodoktalika'])->name('dolpodoktalika');
 
 Route::get('/dpodoktalika', [FrontendController::class, 'dpodoktalika'])->name('dpodoktalika');
+
+Route::get('/dpodoktalika/archary', [FrontendController::class, 'archary'])->name('archary');
+Route::get('/dpodoktalika/badminton', [FrontendController::class, 'badminton'])->name('badminton');
+Route::get('/dpodoktalika/sorirgothon', [FrontendController::class, 'sorirgothon'])->name('sorirgothon');
+Route::get('/dpodoktalika/daba', [FrontendController::class, 'daba'])->name('daba');
+Route::get('/dpodoktalika/cycling', [FrontendController::class, 'cycling'])->name('cycling');
+Route::get('/dpodoktalika/football', [FrontendController::class, 'football'])->name('football');
+Route::get('/dpodoktalika/gymnastic', [FrontendController::class, 'gymnastic'])->name('gymnastic');
+Route::get('/dpodoktalika/hockey', [FrontendController::class, 'hockey'])->name('hockey');
+Route::get('/dpodoktalika/kabadi', [FrontendController::class, 'kabadi'])->name('kabadi');
+Route::get('/dpodoktalika/khokho', [FrontendController::class, 'khokho'])->name('khokho');
+Route::get('/dpodoktalika/ragbi', [FrontendController::class, 'ragbi'])->name('ragbi');
+Route::get('/dpodoktalika/swiming', [FrontendController::class, 'swiming'])->name('swiming');
+Route::get('/dpodoktalika/tabletennis', [FrontendController::class, 'tabletennis'])->name('tabletennis');
+Route::get('/dpodoktalika/taykoando', [FrontendController::class, 'taykoando'])->name('taykoando');
+Route::get('/dpodoktalika/varuttolon', [FrontendController::class, 'varuttolon'])->name('varuttolon');
+Route::get('/dpodoktalika/usha', [FrontendController::class, 'usha'])->name('usha');
+Route::get('/dpodoktalika/athletics', [FrontendController::class, 'athletics'])->name('athletics');
+Route::get('/dpodoktalika/basketball', [FrontendController::class, 'basketball'])->name('basketball');
+Route::get('/dpodoktalika/boxing', [FrontendController::class, 'boxing'])->name('boxing');
+Route::get('/dpodoktalika/cricket', [FrontendController::class, 'cricket'])->name('cricket');
+Route::get('/dpodoktalika/fencing', [FrontendController::class, 'fencing'])->name('fencing');
+Route::get('/dpodoktalika/golf', [FrontendController::class, 'golf'])->name('golf');
+Route::get('/dpodoktalika/handball', [FrontendController::class, 'handball'])->name('handball');
+Route::get('/dpodoktalika/judo', [FrontendController::class, 'judo'])->name('judo');
+Route::get('/dpodoktalika/carate', [FrontendController::class, 'carate'])->name('carate');
+Route::get('/dpodoktalika/roing', [FrontendController::class, 'roing'])->name('roing');
+Route::get('/dpodoktalika/rolerscating', [FrontendController::class, 'rolerscating'])->name('rolerscating');
+Route::get('/dpodoktalika/shooting', [FrontendController::class, 'shooting'])->name('shooting');
+Route::get('/dpodoktalika/tennis', [FrontendController::class, 'tennis'])->name('tennis');
+Route::get('/dpodoktalika/vollyball', [FrontendController::class, 'vollyball'])->name('vollyball');
+Route::get('/dpodoktalika/resling', [FrontendController::class, 'resling'])->name('resling');
 
 
 

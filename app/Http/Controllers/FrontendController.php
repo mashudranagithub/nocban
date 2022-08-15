@@ -221,12 +221,6 @@ class FrontendController extends Controller
         return view('frontend.games-results.international.southAsianBeachGames');
     }
 
-
-
-    
-
-
-
     public function national(){
         return view('frontend.games-results.national.national');
     }
@@ -245,6 +239,130 @@ class FrontendController extends Controller
 
     public function dpodoktalika(){
         return view('frontend.games-results.national.dpodoktalika');
+    }
+
+    public function archary(){
+        return view('frontend.games-results.national.31khela.archary');
+    }
+
+    public function badminton(){
+        return view('frontend.games-results.national.31khela.badminton');
+    }
+
+    public function sorirgothon(){
+        return view('frontend.games-results.national.31khela.sorirgothon');
+    }
+
+    public function daba(){
+        return view('frontend.games-results.national.31khela.daba');
+    }
+
+    public function cycling(){
+        return view('frontend.games-results.national.31khela.cycling');
+    }
+
+    public function football(){
+        return view('frontend.games-results.national.31khela.football');
+    }
+
+    public function gymnastic(){
+        return view('frontend.games-results.national.31khela.gymnastic');
+    }
+
+    public function hockey(){
+        return view('frontend.games-results.national.31khela.hockey');
+    }
+
+    public function kabadi(){
+        return view('frontend.games-results.national.31khela.kabadi');
+    }
+
+    public function khokho(){
+        return view('frontend.games-results.national.31khela.khokho');
+    }
+
+    public function ragbi(){
+        return view('frontend.games-results.national.31khela.ragbi');
+    }
+
+    public function swiming(){
+        return view('frontend.games-results.national.31khela.swiming');
+    }
+
+    public function tabletennis(){
+        return view('frontend.games-results.national.31khela.tabletennis');
+    }
+
+    public function taykoando(){
+        return view('frontend.games-results.national.31khela.taykoando');
+    }
+
+    public function varuttolon(){
+        return view('frontend.games-results.national.31khela.varuttolon');
+    }
+
+    public function usha(){
+        return view('frontend.games-results.national.31khela.usha');
+    }
+
+    public function athletics(){
+        return view('frontend.games-results.national.31khela.athletics');
+    }
+
+    public function basketball(){
+        return view('frontend.games-results.national.31khela.basketball');
+    }
+
+    public function boxing(){
+        return view('frontend.games-results.national.31khela.boxing');
+    }
+
+    public function cricket(){
+        return view('frontend.games-results.national.31khela.cricket');
+    }
+
+    public function fencing(){
+        return view('frontend.games-results.national.31khela.fencing');
+    }
+
+    public function golf(){
+        return view('frontend.games-results.national.31khela.golf');
+    }
+
+    public function handball(){
+        return view('frontend.games-results.national.31khela.handball');
+    }
+
+    public function judo(){
+        return view('frontend.games-results.national.31khela.judo');
+    }
+
+    public function carate(){
+        return view('frontend.games-results.national.31khela.carate');
+    }
+
+    public function roing(){
+        return view('frontend.games-results.national.31khela.roing');
+    }
+
+    public function rolerscating(){
+        return view('frontend.games-results.national.31khela.rolerscating');
+    }
+
+    public function shooting(){
+        return view('frontend.games-results.national.31khela.shooting');
+    }
+
+    public function tennis(){
+        return view('frontend.games-results.national.31khela.tennis');
+    }
+
+    public function vollyball(){
+        return view('frontend.games-results.national.31khela.vollyball');
+    }
+
+    public function resling(){
+        return view('frontend.games-results.national.31khela.resling');
     }
 
 

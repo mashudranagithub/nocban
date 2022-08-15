@@ -53,217 +53,217 @@
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="archary.php">
+                            	<a href="{{route('archary')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/01-archari.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="badminton.php">
+                            	<a href="{{route('badminton')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/02-badminton.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="sorirgothon.php">
+                            	<a href="{{route('sorirgothon')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/03-sorir-gothon.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="daba.php">
+                            	<a href="{{route('daba')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/04-daba.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="cycling.php">
+                            	<a href="{{route('cycling')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/05-cycling.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="football.php">
+                            	<a href="{{route('football')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/06-football.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="gymnastic.php">
+                            	<a href="{{route('gymnastic')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/07-gymnastic.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="hockey.php">
+                            	<a href="{{route('hockey')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/08-hockey.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="kabadi.php">
+                            	<a href="{{route('kabadi')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/09-kabadi.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="khokho.php">
+                            	<a href="{{route('khokho')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/10-khokho.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="ragbi.php">
+                            	<a href="{{route('ragbi')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/11-ragbi.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="swiming.php">
+                            	<a href="{{route('swiming')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/12-swimming.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="tabletennis.php">
+                            	<a href="{{route('tabletennis')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/12-table-tennis.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="taykoando.php">
+                            	<a href="{{route('taykoando')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/13-taykoando.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="varuttolon.php">
+                            	<a href="{{route('varuttolon')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/14-varuttolon.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="usha.php">
+                            	<a href="{{route('usha')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/15-usha.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="athletics.php">
+                            	<a href="{{route('athletics')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/16-athletics.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="basketball.php">
+                            	<a href="{{route('basketball')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/17-basketball.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="boxing.php">
+                            	<a href="{{route('boxing')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/18-boxing.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="cricket.php">
+                            	<a href="{{route('cricket')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/19-cricket.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="fencing.php">
+                            	<a href="{{route('fencing')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/20-fencing.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="golf.php">
+                            	<a href="{{route('golf')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/21-golf.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="handball.php">
+                            	<a href="{{route('handball')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/22-handball.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="judo.php">
+                            	<a href="{{route('judo')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/23-judo.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="carate.php">
+                            	<a href="{{route('carate')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/24-carate.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="roing.php">
+                            	<a href="{{route('roing')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/25-roing.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="rolerscating.php">
+                            	<a href="{{route('rolerscating')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/26-roler-scating.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="shooting.php">
+                            	<a href="{{route('shooting')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/27-shooting.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="tennis.php">
+                            	<a href="{{route('tennis')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/28-tennis.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="vollyball.php">
+                            	<a href="{{route('vollyball')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/29-vollyball.png')}}">
                             	</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="single-list">
-                            	<a href="resling.php">
+                            	<a href="{{route('resling')}}">
                             	    <img src="{{asset('frontend/assets/img/31khela/30-resling.png')}}">
                             	</a>
                             </div>
