@@ -1,4 +1,6 @@
-<?php include('components/page-head.php'); ?>
+@extends('frontend.layouts.master')
+
+@section('content')
 
 <!-- Section Title -->           
 <section class="section-title img-about">
@@ -15,13 +17,13 @@
     <div class="crumbs">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
                 <li>Games & Results</li>  
                 <li>/</li>
-                <li><a href="international.php">International</a></li>  
+                <li><a href="{{route('international')}}">International</a></li>  
                 <li>/</li>
-                <li><a href="commonWealthGames.php">Common Wealth Games</a></li>  
+                <li><a href="{{route('commonWealthGames')}}">Common Wealth Games</a></li>  
                 <li>/</li>
                 <li>20th Common Wealth Games</li>                                      
             </ul>
@@ -29,7 +31,7 @@
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="assets/img/img-theme/shp.png" class="img-responsive" alt="">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="">
     </div>
 
     <!-- Content Central -->
@@ -46,7 +48,7 @@
                     <!-- Info ABout --> 
                     <div class="row">
                         <div class="col-md-12">
-                            <embed src="assets/pdf/20thCommonwealthGames.pdf" width="100%" height="750" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+                            <embed src="{{asset('frontend/assets/pdf/20thCommonwealthGames.pdf')}}" width="100%" height="750" alt="pdf" >
                         </div>
                     </div>
                     <!-- End Info ABout --> 
@@ -62,4 +64,4 @@
 </section>
 <!-- End Section Area - Content Central -->
 
-<?php include('components/page-tail.php'); ?>
+@endsection

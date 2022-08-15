@@ -169,6 +169,64 @@ class FrontendController extends Controller
         return view('frontend.games-results.international.international');
     }
 
+    public function asianGames(){
+        return view('frontend.games-results.international.asianGames');
+    }
+
+    public function asianBeachGames(){
+        return view('frontend.games-results.international.asianBeachGames');
+    }
+
+    public function asianYouthGames(){
+        return view('frontend.games-results.international.asianYouthGames');
+    }
+
+    public function commonWealthGames(){
+        return view('frontend.games-results.international.commonWealthGames');
+    }
+
+    public function CommonwealthGames20th(){
+        return view('frontend.games-results.international.20thCommonwealthGames');
+    }
+
+    public function commonWealthYouthGames(){
+        return view('frontend.games-results.international.commonWealthYouthGames');
+    }
+
+    public function childrenOfAsiaInternationalSportsGames(){
+        return view('frontend.games-results.international.childrenOfAsiaInternationalSportsGames');
+    }
+
+    public function islamicSolidarityGames(){
+        return view('frontend.games-results.international.islamicSolidarityGames');
+    }
+
+    public function summerOlympicGames(){
+        return view('frontend.games-results.international.summerOlympicGames');
+    }
+
+    public function youthOlympicGames(){
+        return view('frontend.games-results.international.youthOlympicGames');
+    }
+
+    public function southAsianGames(){
+        return view('frontend.games-results.international.southAsianGames');
+    }
+
+    public function SouthAsianGames11th(){
+        return view('frontend.games-results.international.11thSouthAsianGames');
+    }
+
+    public function southAsianBeachGames(){
+        return view('frontend.games-results.international.southAsianBeachGames');
+    }
+
+
+
+    
+
+
+
     public function national(){
         return view('frontend.games-results.national.national');
     }

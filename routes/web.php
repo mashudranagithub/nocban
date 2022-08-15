@@ -118,6 +118,21 @@ Route::get('/doping', [FrontendController::class, 'doping'])->name('doping');
 Route::get('/athleteProfiles', [FrontendController::class, 'athleteProfiles'])->name('athleteProfiles');
 
 Route::get('/international', [FrontendController::class, 'international'])->name('international');
+Route::get('/asianGames', [FrontendController::class, 'asianGames'])->name('asianGames');
+Route::get('/asianBeachGames', [FrontendController::class, 'asianBeachGames'])->name('asianBeachGames');
+Route::get('/asianYouthGames', [FrontendController::class, 'asianYouthGames'])->name('asianYouthGames');
+
+Route::get('/commonWealthGames', [FrontendController::class, 'commonWealthGames'])->name('commonWealthGames');
+Route::get('/20thCommonwealthGames', [FrontendController::class, 'CommonwealthGames20th'])->name('20thCommonwealthGames');
+
+Route::get('/commonWealthYouthGames', [FrontendController::class, 'commonWealthYouthGames'])->name('commonWealthYouthGames');
+Route::get('/childrenOfAsiaInternationalSportsGames', [FrontendController::class, 'childrenOfAsiaInternationalSportsGames'])->name('childrenOfAsiaInternationalSportsGames');
+Route::get('/islamicSolidarityGames', [FrontendController::class, 'islamicSolidarityGames'])->name('islamicSolidarityGames');
+Route::get('/summerOlympicGames', [FrontendController::class, 'summerOlympicGames'])->name('summerOlympicGames');
+Route::get('/youthOlympicGames', [FrontendController::class, 'youthOlympicGames'])->name('youthOlympicGames');
+Route::get('/southAsianGames', [FrontendController::class, 'southAsianGames'])->name('southAsianGames');
+Route::get('/11thSouthAsianGames', [FrontendController::class, 'SouthAsianGames11th'])->name('11thSouthAsianGames');
+Route::get('/southAsianBeachGames', [FrontendController::class, 'southAsianBeachGames'])->name('southAsianBeachGames');
 
 
 Route::get('/national', [FrontendController::class, 'national'])->name('national');

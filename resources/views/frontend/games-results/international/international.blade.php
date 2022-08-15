@@ -44,17 +44,17 @@
                     <!-- Info ABout --> 
                     <div class="row">
                         <div class="col-md-12">
-                            <h4><a href="asianGames.php">Asian Games</a></h4>
-                            <h4><a href="asianBeachGames.php">Asian Beach Games</a></h4>
-                            <h4><a href="asianYouthGames.php">Asian Youth Games</a></h4>
-                            <h4><a href="commonWealthGames.php">Common Wealth Games</a></h4>
-                            <h4><a href="commonWealthYouthGames.php">Common Wealth Youth Games</a></h4>
-                            <h4><a href="childrenOfAsiaInternationalSportsGames.php">Children of Asia International Sports Games</a></h4>
-                            <h4><a href="islamicSolidarityGames.php">Islamic Solidarity Games</a></h4>
-                            <h4><a href="summerOlympicGames.php">Summer Olympic Games</a></h4>
-                            <h4><a href="youthOlympicGames.php">Youth Olympic Games</a></h4>
-                            <h4><a href="southAsianGames.php">South Asian Games</a></h4>
-                            <h4><a href="southAsianBeachGames.php">South Asian Beach Games</a></h4>
+                            <h4><a href="{{route('asianGames')}}">Asian Games</a></h4>
+                            <h4><a href="{{route('asianBeachGames')}}">Asian Beach Games</a></h4>
+                            <h4><a href="{{route('asianYouthGames')}}">Asian Youth Games</a></h4>
+                            <h4><a href="{{route('commonWealthGames')}}">Common Wealth Games</a></h4>
+                            <h4><a href="{{route('commonWealthYouthGames')}}">Common Wealth Youth Games</a></h4>
+                            <h4><a href="{{route('childrenOfAsiaInternationalSportsGames')}}">Children of Asia International Sports Games</a></h4>
+                            <h4><a href="{{route('islamicSolidarityGames')}}">Islamic Solidarity Games</a></h4>
+                            <h4><a href="{{route('summerOlympicGames')}}">Summer Olympic Games</a></h4>
+                            <h4><a href="{{route('youthOlympicGames')}}">Youth Olympic Games</a></h4>
+                            <h4><a href="{{route('southAsianGames')}}">South Asian Games</a></h4>
+                            <h4><a href="{{route('southAsianBeachGames')}}">South Asian Beach Games</a></h4>
                         </div>
                     </div>
                     <!-- End Info ABout --> 
