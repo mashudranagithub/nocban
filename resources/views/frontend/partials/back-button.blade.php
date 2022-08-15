@@ -1,5 +1,5 @@
 <li class="back-btn">
-    <a href="{{route('homepage')}}">
+    <a href="{{ URL::previous() }}">
         <img src="{{asset('frontend/assets/img/left-arrow.png')}}">
     </a>
 </li> 
