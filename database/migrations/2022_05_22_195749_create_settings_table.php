@@ -18,13 +18,13 @@ return new class extends Migration
             $table->string('logo')->nullable();
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
-            $table->string('instagram')->nullable();
-            $table->string('linkedin')->nullable();
+            $table->string('vimeo')->nullable();
+            $table->string('googleplus')->nullable();
             $table->string('youtube')->nullable();
-            $table->text('office_time')->nullable();
             $table->text('address');
+            $table->string('phone');
+            $table->string('fax');
             $table->string('email');
-            $table->string('mobile');
             $table->timestamps();
         });
     }

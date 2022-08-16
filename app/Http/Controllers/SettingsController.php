@@ -33,7 +33,7 @@ class SettingsController extends Controller
         $this->validate($request,[
             'address'=>'required',
             'email'=>'required',
-            'mobile'=>'required'
+            'phone'=>'required'
         ]);
         $settings = Settings::first();
         $img = $request->file('logo');
@@ -51,13 +51,13 @@ class SettingsController extends Controller
         }
         $settings->facebook = $request->input('facebook');
         $settings->twitter = $request->input('twitter');
-        $settings->linkedin = $request->input('linkedin');
-        $settings->instagram = $request->input('instagram');
+        $settings->linkedin = $request->input('vimeo');
+        $settings->instagram = $request->input('googleplus');
         $settings->youtube = $request->input('youtube');
-        $settings->office_time = $request->input('office_time');
         $settings->address = $request->input('address');
+        $settings->mobile = $request->input('phone');
+        $settings->fax = $request->input('fax');
         $settings->email = $request->input('email');
-        $settings->mobile = $request->input('mobile');
         $settings->save();
         return redirect()->route('settings')->with('msg','Settings Updated Successfully');
     }

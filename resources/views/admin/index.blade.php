@@ -42,15 +42,15 @@
 
         <div class="col-md-6">
             <div class="form-group">
-                <label for="linkedin">Linkedin Link</label>
-                <input type="text" name="linkedin" id="linkedin" class="form-control" value="@if(isset($settings->linkedin)) {{$settings->linkedin}} @endif">
+                <label for="vimeo">Vimeo Link</label>
+                <input type="text" name="vimeo" id="vimeo" class="form-control" value="@if(isset($settings->vimeo)) {{$settings->vimeo}} @endif">
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="form-group">
-                <label for="instagram">Instagram Link</label>
-                <input type="text" name="instagram" id="instagram" class="form-control" value="@if(isset($settings->instagram)) {{$settings->instagram}} @endif">
+                <label for="googleplus">Google Plus Link</label>
+                <input type="text" name="googleplus" id="googleplus" class="form-control" value="@if(isset($settings->googleplus)) {{$settings->googleplus}} @endif">
             </div>
         </div>
 
@@ -63,13 +63,6 @@
 
         <div class="col-md-6">
             <div class="form-group">
-                <label for="office_time">Office Hour/Time</label>
-                <textarea name="office_time" id="office_time" class="form-control" cols="30" rows="1">@if(isset($settings->office_time)) {{$settings->office_time}}  @endif</textarea>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
                 <label for="address">Address</label>
                 <textarea name="address" id="address" class="form-control" cols="30" rows="1">@if(isset($settings->address)) {{$settings->address}} @endif</textarea>
             </div>
@@ -77,15 +70,22 @@
 
         <div class="col-md-6">
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" class="form-control" value="@if(isset($settings->email)) {{$settings->email}} @endif">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" class="form-control" value="@if(isset($settings->phone)) {{$settings->phone}} @endif">
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="form-group">
-                <label for="mobile">Mobile</label>
-                <input type="text" name="mobile" id="mobile" class="form-control" value="@if(isset($settings->mobile)) {{$settings->mobile}} @endif">
+                <label for="fax">Fax</label>
+                <input type="text" name="fax" id="fax" class="form-control" value="@if(isset($settings->fax)) {{$settings->fax}} @endif">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" value="@if(isset($settings->email)) {{$settings->email}} @endif">
             </div>
         </div>
 
