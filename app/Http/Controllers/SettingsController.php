@@ -39,23 +39,23 @@ class SettingsController extends Controller
         $img = $request->file('logo');
         if($img){
             if(isset($settings->logo)) {
-                $file_photo = public_path("frontend/assets/img/settings/".$settings->logo);
+                $file_photo = public_path("frontend/assets/img/settings/logo/".$settings->logo);
                 if(File::exists($file_photo)){
                     unlink($file_photo);
                 }            
             }
             $name = $img->getClientOriginalName();
-            $path = public_path("frontend/assets/img/settings/");
+            $path = public_path("frontend/assets/img/settings/logo/");
             $img->move($path, $name);
             $settings->logo = $name;
         }
         $settings->facebook = $request->input('facebook');
         $settings->twitter = $request->input('twitter');
-        $settings->linkedin = $request->input('vimeo');
-        $settings->instagram = $request->input('googleplus');
+        $settings->vimeo = $request->input('vimeo');
+        $settings->googleplus = $request->input('googleplus');
         $settings->youtube = $request->input('youtube');
         $settings->address = $request->input('address');
-        $settings->mobile = $request->input('phone');
+        $settings->phone = $request->input('phone');
         $settings->fax = $request->input('fax');
         $settings->email = $request->input('email');
         $settings->save();

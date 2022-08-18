@@ -35,7 +35,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             @if(isset($settings->logo))
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <img style="margin-bottom: 20px;" src="{{ asset('frontend/assets/img/settings/'.$settings->logo)}}" alt="Logo image">
+                <img style="margin-bottom: 20px;" src="{{ asset('frontend/assets/img/settings/logo/'.$settings->logo)}}" alt="Logo image">
             </div>
             @endif
             <div class="form-group">

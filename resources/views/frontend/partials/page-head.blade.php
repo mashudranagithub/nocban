@@ -49,7 +49,7 @@
                             <!-- Logo-->
                             <div class="col-md-12 logo text-center">
                                 <a href="{{route('homepage')}}" title="Return Home">                            
-                                    <img src="{{ asset('frontend/assets/img/logo.png') }}" alt="Logo" class="logo_img">
+                                    <img src="{{ asset('frontend/assets/img/settings/logo/'.$settings->logo) }}" alt="Logo" class="logo_img">
                                 </a>
                             </div>
                             <!-- End Logo-->

@@ -7,35 +7,35 @@
                         <ul class="social">
                                 <li>
                                     <div>
-                                        <a href="#" class="facebook">
+                                        <a target="_blank" href="{{$settings->facebook}}" class="facebook">
                                             <i class="fa fa-facebook"></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <a href="#" class="twitter-icon">
+                                        <a target="_blank" href="{{$settings->twitter}}" class="twitter-icon">
                                             <i class="fa fa-twitter"></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <a href="#" class="vimeo">
+                                        <a target="_blank" href="{{$settings->vimeo}}" class="vimeo">
                                             <i class="fa fa-vimeo-square"></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <a href="#" class="google-plus">
+                                        <a target="_blank" href="{{$settings->googleplus}}" class="google-plus">
                                             <i class="fa fa-google-plus"></i>
                                         </a>
                                     </div>
                                 </li> 
                                 <li>
                                     <div>
-                                        <a href="#" class="youtube">
+                                        <a target="_blank" href="{{$settings->youtube}}" class="youtube">
                                             <i class="fa fa-youtube"></i>
                                         </a>
                                     </div>

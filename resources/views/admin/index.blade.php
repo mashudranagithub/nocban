@@ -20,11 +20,12 @@
             <hr>
             <br>
         </div>
+        
+        @if(isset($settings->logo))
         <div class="col-md-6">
-            @if(isset($settings->logo))
-            <img src="{{ asset('frontend/assets/img/settings/'.$settings->logo)}}" alt="Logo image">
-            @endif
+            <img src="{{ asset('frontend/assets/img/settings/logo/'.$settings->logo)}}" alt="Logo image">
         </div>
+        @endif
 
         <div class="col-md-6">
             <div class="form-group">

@@ -16,7 +16,7 @@
     <div class="crumbs">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
                 <li>Contact Us</li>                                       
             </ul>
@@ -24,7 +24,7 @@
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="assets/img/img-theme/shp.png" class="img-responsive" alt="">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="">
     </div>
 
     <!-- Google Map --> 
@@ -41,10 +41,9 @@
                         <h4>Olympic Bhaban </h4>
                     </div>
                     <address>
-                      <i class="fa fa-map-marker"></i><strong>Address: </strong> Rajuk Avenue, Outer Stadium, Purana Paltan,<br>
-                      <i class="fa fa-plane"></i><strong>City: </strong>Dhaka 1000<br>
-                      <i class="fa fa-phone"></i> <abbr title="Phone">P:</abbr> 880-2-9560369, 9515567-7<br>
-                      <i class="fa fa-fax"></i> <abbr title="fax">F:</abbr> 880-2-9563304
+                      <i class="fa fa-map-marker"></i><strong>Address: </strong> {{$settings->address}}<br>
+                      <i class="fa fa-phone"></i> <abbr title="Phone">P:</abbr> {{$settings->phone}}<br>
+                      <i class="fa fa-fax"></i> <abbr title="fax">F:</abbr> {{$settings->fax}}
                     </address>
                 </aside>
 
@@ -53,7 +52,7 @@
                         <h4>Emails Contact</h4>
                     </div>
                     <address>
-                      <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#"> nocban@gmail.com</a><br>
+                      <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#"> {{$settings->email}}</a><br>
                     </address>
                 </aside>
             </div>
