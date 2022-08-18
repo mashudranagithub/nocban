@@ -1,11 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FrontendController;
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\SlidersController;
+
+
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\GalleryItemController;
@@ -13,7 +16,6 @@ use App\Http\Controllers\FilePostController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\AthleteController;
 use App\Http\Controllers\NewsController;
-use App\Http\Controllers\HomeController;
 
 Auth::routes();
 Route::group(['middleware' => ['auth']], function() {
@@ -31,14 +33,6 @@ Route::group(['middleware' => ['auth']], function() {
 	Route::put('/slider/update/{id}', [SlidersController::class, 'update'])->name('updateSlider');
 	Route::delete('/slider/delete/{id}', [SlidersController::class, 'destroy'])->name('deleteSlider');
 
-	// Partners Routes Start Here
-	Route::get('all-partners', [PartnerController::class, 'index'])->name('all-partners');
-	Route::get('partner/create', [PartnerController::class, 'create'])->name('create-partner');
-	Route::post('partner/create', [PartnerController::class, 'store'])->name('store-partner');
-	Route::get('partner/edit/{id}', [PartnerController::class, 'edit'])->name('edit-partner');
-	Route::put('partner/update/{id}', [PartnerController::class, 'update'])->name('update-partner');
-	Route::delete('partner/delete/{id}', [PartnerController::class, 'destroy'])->name('delete-partner');
-
 	// Gallery Routes Start Here
 	Route::get('/galleries', [GalleryController::class, 'index'])->name('galleries');
 	Route::get('/gallery/create', [GalleryController::class, 'create'])->name('createGallery');
@@ -54,6 +48,16 @@ Route::group(['middleware' => ['auth']], function() {
 	Route::get('/gallery/item/edit/{id}', [GalleryItemController::class, 'edit'])->name('edit-gallery-item');
 	Route::put('/gallery/item/update/{id}', [GalleryItemController::class, 'update'])->name('update-gallery-item');
 	Route::delete('/gallery/item/delete/{id}', [GalleryItemController::class, 'destroy'])->name('delete-gallery-item');
+
+
+
+	// Partners Routes Start Here
+	Route::get('all-partners', [PartnerController::class, 'index'])->name('all-partners');
+	Route::get('partner/create', [PartnerController::class, 'create'])->name('create-partner');
+	Route::post('partner/create', [PartnerController::class, 'store'])->name('store-partner');
+	Route::get('partner/edit/{id}', [PartnerController::class, 'edit'])->name('edit-partner');
+	Route::put('partner/update/{id}', [PartnerController::class, 'update'])->name('update-partner');
+	Route::delete('partner/delete/{id}', [PartnerController::class, 'destroy'])->name('delete-partner');
 
 	// File Posts Routes Start Here
 	Route::get('all-file-posts', [FilePostController::class, 'index'])->name('all-file-posts');
@@ -93,6 +97,10 @@ Route::group(['middleware' => ['auth']], function() {
 });
 
 Route::get('/', [FrontendController::class, 'homepage'])->name('homepage');
+
+Route::get('/all-galleries', [FrontendController::class, 'galleries'])->name('all-galleries');
+Route::get('/galleries/{id}', [FrontendController::class, 'singleGallery'])->name('singleGallery');
+
 Route::get('/contact', [FrontendController::class, 'contactpage'])->name('contactpage');
 Route::get('/esportsroad', [FrontendController::class, 'esportsroad'])->name('esportsroad');
 Route::get('/boaelec2021', [FrontendController::class, 'boaelec2021'])->name('boaelec2021');

@@ -48,13 +48,8 @@
           </div>
 
           <div class="form-group">
-            <label for="slider_big_title">Slider Big Title</label>
-            <input name="slider_big_title" type="text" class="form-control" id="slider_big_title" value="{{ $slider->slider_big_title }}">
-          </div>
-
-          <div class="form-group">
-            <label for="slider_small_title">Slider Small Title</label>
-            <input name="slider_small_title" type="text" class="form-control" id="slider_small_title" value="{{ $slider->slider_small_title }}">
+            <label for="slider_title">Slider Title</label>
+            <input name="slider_title" type="text" class="form-control" id="slider_title" value="{{ $slider->slider_title }}">
           </div>
 
           <div class="form-group">

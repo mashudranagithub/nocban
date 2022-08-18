@@ -325,6 +325,10 @@ iframe.video {
     margin-top: 25px !important;
 }
 
+.fancybox-overlay.fancybox-overlay-fixed {
+    z-index: 9999;
+}
+
 
 /* Panel Box --------------------------------------------*/
 

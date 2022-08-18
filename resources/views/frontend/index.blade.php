@@ -4,37 +4,24 @@
 
 <!-- Slide -->           
 <section class="camera_wrap camera_white_skin" id="slide">
-<!-- Item Slide - Caption --> 
-<div  data-src="{{ asset('frontend/assets/img/slide/slides/1.jpg') }}">
-    <div class="style-caption fadeFromTop">
-        <div class="overlay-bg"></div>
-    </div>
-</div>
-<!-- End Item Slide - Caption  -->
 
-<!-- Item Slide - Caption --> 
-<div  data-src="{{ asset('frontend/assets/img/slide/slides/2.jpg') }}">
-    <div class="style-caption fadeFromTop">
-        <div class="overlay-bg"></div>
+    @foreach($sliders as $slide)
+    <!-- Item Slide - Caption --> 
+    <div  data-src="{{ asset('frontend/assets/img/sliders/'.$slide->slider_image) }}">
+        <div class="style-caption fadeFromTop">
+            <div class="overlay-bg"></div>
+            {{-- <div class="container"> 
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1 class="animated fadeInRight">{{$slide->slider_title}}</h1>
+                    </div>    
+                </div>                     
+            </div> --}}
+        </div>
     </div>
-</div>
-<!-- End Item Slide - Caption  -->
+    <!-- End Item Slide - Caption  -->
+    @endforeach
 
-<!-- Item Slide - Caption --> 
-<div  data-src="{{ asset('frontend/assets/img/slide/slides/3.jpg') }}">
-    <div class="style-caption fadeFromTop">
-        <div class="overlay-bg"></div>
-    </div>
-</div>
-<!-- End Item Slide - Caption  --> 
-
-<!-- Item Slide - Caption --> 
-<div  data-src="{{ asset('frontend/assets/img/slide/slides/4.jpg') }}">
-    <div class="style-caption fadeFromTop">
-        <div class="overlay-bg"></div>
-    </div>
-</div>
-<!-- End Item Slide - Caption  -->  
 </section>   
 <!-- End Slide --> 
 
@@ -170,45 +157,25 @@
                     <!-- Clubs Carousel-->  
                     <ul class="clubs-teams row">
 
+                        @foreach($galleries as $gallery)
                         <!-- Item clubs --> 
                         <li class="col-sm-4">
                             <div class="header-post">
-                                <a href="#"><img src="{{ asset('frontend/assets/uploads/gallery/1.jpg') }}" alt="National Olympic Academy Photo Gallery"></a>
+                                <a href="{{route('singleGallery', $gallery->id)}}"><img src="{{ asset('frontend/assets/img/galleries_thumbnails/'.$gallery->image) }}" alt="{{$gallery->name}}"></a>
                             </div>
                             <div class="info-post">
-                                <h4><a href="#">National Olympic Academy Photo Gallery</a></h4>
+                                <h4><a href="{{route('singleGallery', $gallery->id)}}">{{$gallery->name}}</a></h4>
                             </div>
                         </li>
-                        <!-- End Item clubs --> 
-
-                        <!-- Item clubs --> 
-                        <li class="col-sm-4">
-                            <div class="header-post">
-                                <a href="#"><img src="{{ asset('frontend/assets/uploads/gallery/2.jpg') }}" alt="National Olympic Academy Photo Gallery"></a>
-                            </div>
-                            <div class="info-post">
-                                <h4><a href="#">National Olympic Academy Photo Gallery</a></h4>
-                            </div>
-                        </li>
-                        <!-- End Item clubs --> 
-
-                        <!-- Item clubs --> 
-                        <li class="col-sm-4">
-                            <div class="header-post">
-                                <a href="#"><img src="{{ asset('frontend/assets/uploads/gallery/3.jpg') }}" alt="National Olympic Academy Photo Gallery"></a>
-                            </div>
-                            <div class="info-post">
-                                <h4><a href="#">National Olympic Academy Photo Gallery</a></h4>
-                            </div>
-                        </li>
-                        <!-- End Item clubs --> 
+                        <!-- End Item clubs -->
+                        @endforeach
 
                     </ul>
                     <!-- End Clubs Carousel--> 
                     
                     <div class="clearfix" style="margin-bottom: 15px;"></div>
                     
-                    <a href="gallery.php" class="btn btn-default pull-right">View All</a>    
+                    <a href="{{route('all-galleries')}}" class="btn btn-default pull-right">View All</a>    
                 </div>
                 <!-- Tab Three - Club Teams -->
             </div>

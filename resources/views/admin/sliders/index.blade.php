@@ -42,7 +42,7 @@
 				<thead>
 					<tr>
 						<th>Image</th>
-						<th>Slider Text</th>
+						<th>Slider Title</th>
 						<th>Slider Position</th>
 						<th>Action</th>
 					</tr>
@@ -54,8 +54,7 @@
 							<img style="width: 200px;" src="{{ url('frontend/assets/img/sliders/'.$slide->slider_image) }}" alt="Slide Image">
 						</td>
 						<td width="400px;">
-							<h4>{{ $slide->slider_big_title }}</h4> <br>
-							<h6>{{ $slide->slider_small_title }}</h6>
+							<h4>{{ $slide->slider_title }}</h4>
 						</td>
 						<td width="150px;">{{ $slide->slider_position }}</td>
 						<td width="200px;">
@@ -68,7 +67,6 @@
 				@endforeach
 				</tbody>
 			</table>
-			{{ $sliders->links() }}
             </div>
           </div>
           <!-- /.box -->

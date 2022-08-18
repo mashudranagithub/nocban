@@ -16,7 +16,7 @@ class SlidersController extends Controller
      */
     public function index()
     {
-        $sliders = Slider::paginate(5);
+        $sliders = Slider::orderBy('id', 'desc')->get();
         return view('admin.sliders.index', compact('sliders'));
     }
 
@@ -52,8 +52,7 @@ class SlidersController extends Controller
             $slider->slider_image = $name;
         }
 
-        $slider->slider_big_title = $request->input('slider_big_title');
-        $slider->slider_small_title = $request->input('slider_small_title');
+        $slider->slider_title = $request->input('slider_title');
         $slider->slider_position = $request->input('slider_position');
         $slider->active_yn = $request->input('active_yn');
         $slider->save();
@@ -113,8 +112,7 @@ class SlidersController extends Controller
             $slider->slider_image = $name;
         }
 
-        $slider->slider_big_title = $request->input('slider_big_title');
-        $slider->slider_small_title = $request->input('slider_small_title');
+        $slider->slider_title = $request->input('slider_title');
         $slider->slider_position = $request->input('slider_position');
         $slider->active_yn = $request->input('active_yn');
         $slider->save();

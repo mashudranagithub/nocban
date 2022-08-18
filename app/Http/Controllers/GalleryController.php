@@ -16,11 +16,9 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $photo_galleries = Gallery::where('type', 'photo')->paginate(5);
-        $video_galleries = Gallery::where('type', 'video')->paginate(5);
+        $galleries = Gallery::orderBy('created_at', 'desc')->paginate(3);
         return view('admin.gallery.index', compact(
-            'photo_galleries',
-            'video_galleries'
+            'galleries'
         ));
     }
 
@@ -43,18 +41,14 @@ class GalleryController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'type'=>'required',
-            'gal_cat'=>'required',
             'image'=>'required',
             'name'=>'required'
         ]);
         $gallery = new Gallery();
-        $gallery->type = $request->input('type');
-        $gallery->gal_cat = $request->input('gal_cat');
         $img = $request->file('image');
         if($img){
             $name = $img->getClientOriginalName();
-            $path = public_path("frontend/assets/img/galleries_thumbnails/".$request->input('type'));
+            $path = public_path("frontend/assets/img/galleries_thumbnails/");
             $img->move($path, $name);
             $gallery->image = $name;
         }
@@ -98,23 +92,19 @@ class GalleryController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-            'type'=>'required',
-            'gal_cat'=>'required',
             'name'=>'required'
         ]);
         $gallery = Gallery::find($id);
-        $gallery->type = $request->input('type');
-        $gallery->gal_cat = $request->input('gal_cat');
         $img = $request->file('image');
         if($img){
             if($gallery->image) {
-                $existing_file = public_path("frontend/assets/img/galleries_thumbnails/".$gallery->type."/".$gallery->image);
+                $existing_file = public_path("frontend/assets/img/galleries_thumbnails/".$gallery->image);
                 if(File::exists($existing_file)){
                     unlink($existing_file);
                 }            
             }
             $name = $img->getClientOriginalName();
-            $path = public_path("frontend/assets/img/galleries_thumbnails/".$request->input('type'));
+            $path = public_path("frontend/assets/img/galleries_thumbnails/");
             $img->move($path, $name);
             $gallery->image = $name;
         }
@@ -133,7 +123,7 @@ class GalleryController extends Controller
     {
         $gallery = Gallery::findOrFail($id);
         if($gallery->image) {
-            $existing_file = public_path("frontend/assets/img/galleries_thumbnails/".$gallery->type."/".$gallery->image);
+            $existing_file = public_path("frontend/assets/img/galleries_thumbnails/".$gallery->image);
             if(File::exists($existing_file)){
                 unlink($existing_file);
             }            

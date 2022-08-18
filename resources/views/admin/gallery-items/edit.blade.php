@@ -43,24 +43,9 @@
         <div class="col-lg-12 col-xs-12">
 
             <div class="box-body">
-                <h2>Gallery Item Edit Form</h2>
+                <h2>Gallery Image Edit Form</h2>
                 <hr>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label class="required">Select gallery item type</label>
-                        <br>
-                        <div class="form-group" style="display: inline-flex;justify-content: space-between;min-width: 120px;">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="item_type" id="exampleRadios1" value="photo" @if($gallery->type=="photo") checked @endif>
-                                <label class="form-check-label" for="exampleRadios1">Photo</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="item_type" id="exampleRadios2" value="video" @if($gallery->type=="video") checked @endif>
-                                <label class="form-check-label" for="exampleRadios2">Video</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="row">
                     <div id="photo_galleries">
 
@@ -72,7 +57,7 @@
                                     <label for="gallery_id" class="required">Gallery</label>
                                     <select name="gallery_id" id="gallery_id" required class="form-control">
                                         <option value="">Select Gallery</option>
-                                        @foreach($photo_galleries as $p_gallery)
+                                        @foreach($galleries as $p_gallery)
                                         <option value="{{ $p_gallery->id }}" @if($p_gallery->id == $gallery->gallery_id) selected @endif>{{ $p_gallery->name }}</option>
                                         @endforeach
                                     </select>
@@ -89,62 +74,22 @@
 
                             <div class="col-md-7">
                                 <div class="form-group">
-                                    <label for="caption">Gallery Item Caption</label>
+                                    <label for="caption">Gallery Image Caption</label>
                                     <textarea name="caption" id="caption" cols="30" rows="2" class="form-control">{{$gallery->caption}}</textarea>
                                 </div>
                             </div>
 
                             <div class="col-md-5 mt-2 mb-2">
-                                <img style="max-width: 300px; max-height: 300px;" src="{{ asset('frontend/assets/img/galleries_items/'.$gallery->type.'/'.$gallery->gallery_id.'/'.$gallery->gallery_item)}}" alt="Gallery present image">
+                                <img style="max-width: 300px; max-height: 300px;" src="{{ asset('frontend/assets/img/galleries_items/'.$gallery->gallery_id.'/'.$gallery->gallery_item)}}" alt="Gallery present image">
                             </div>
 
                             <div class="col-md-2">
-                                <button type="submit" class="btn btn-primary mt-3" style="margin-top: 25px;" >Gallery Item Update</button>
+                                <button type="submit" class="btn btn-primary mt-3" style="margin-top: 25px;" >Gallery Image Update</button>
                             </div>
 
                         </form>
 
 
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div id="video_galleries">
-
-                        <form role="form" action="{{ route('update-gallery-item', $gallery->id) }}" method="post" enctype="multipart/form-data">
-                            {{ csrf_field() }}
-                            <input type="hidden" name="_method" value="PUT">
-                            <div class="col-md-7">
-                                <div class="form-group">
-                                    <label for="gallery_id" class="required">Gallery</label>
-                                    <select name="gallery_id" id="gallery_id" required class="form-control">
-                                        <option value="">Select Gallery</option>
-                                        @foreach($video_galleries as $v_gallery)
-                                        <option value="{{ $v_gallery->id }}" @if($v_gallery->id == $gallery->gallery_id) selected @endif>{{ $v_gallery->name }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-md-5">
-                                <div class="form-group">
-                                    <label for="gallery_item">Gallery Video Link</label>
-                                    <input name="gallery_item" type="url" value="{{$gallery->gallery_item}}" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="col-md-7">
-                                <div class="form-group">
-                                    <label for="caption">Gallery Item Caption</label>
-                                    <textarea name="caption" id="caption" cols="30" rows="2" class="form-control">{{$gallery->caption}}</textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <button type="submit" class="btn btn-primary mt-3" style="margin-top: 25px;" >Gallery Item Update</button>
-                            </div>
-
-                        </form>
                     </div>
                 </div>
 
@@ -159,27 +104,7 @@
 
 
 @section('script')
-function selGallery (sel_gallery) {
-    var gallery = sel_gallery;
-    if(gallery == 'photo'){
-        $('#photo_galleries').show();
-        $('#video_galleries').hide();
-    }else if(gallery == 'video') {
-        $('#photo_galleries').hide();
-        $('#video_galleries').show();
-    }else {
-        $('#photo_galleries').show();
-        $('#video_galleries').hide();
-    }
-};
-$(document).ready(function(){
-    var sel_gallery = $("input[name='item_type']:checked").val();
-    selGallery (sel_gallery);
-    $("input[name='item_type']").on('change', function(){
-        var sel_gallery = $("input[name='item_type']:checked").val();
-        selGallery (sel_gallery);
-    });
-});
+{{-- Own script for this page only --}}
 @endsection
 
 @endsection

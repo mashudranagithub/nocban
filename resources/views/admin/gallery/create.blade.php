@@ -48,32 +48,9 @@
                     <h2>Gallery Add Form</h2>
                     <hr>
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-8">
                             <div class="form-group">
-                                <label for="type" class="required">Gallery Type</label>
-                                <select name="type" id="type" required class="form-control">
-                                    <option value="">Select Gallery Type</option>
-                                    <option value="photo">Photo Gallery</option>
-                                    <option value="video">Video Gallery</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="gal_cat" class="required">Gallery Category</label>
-                                <select name="gal_cat" id="gal_cat" required class="form-control">
-                                    <option value="">Select gallery category</option>
-                                    <option value="local">Local</option>
-                                    <option value="national">National</option>
-                                    <option value="international">International</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="name" class="required">Gallery/Event Name</label>
+                                <label for="name" class="required">Gallery Name</label>
                                 <textarea name="name" class="form-control" id="name" cols="30" rows="2" required></textarea>
                             </div>
                         </div>

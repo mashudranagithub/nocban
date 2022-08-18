@@ -49,7 +49,7 @@
             <li class="treeview">
                 <a href="javascript:void(0);">
                     <i class="fa fa-picture-o text-aqua"></i>
-                    <span>Gallery (Photo & Video)</span>
+                    <span>Gallery</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
@@ -57,8 +57,8 @@
                 <ul class="treeview-menu">
                     <li><a class="nav-link" href="{{route('galleries')}}"><i class="fa fa-circle-o text-aqua"></i>Galleries</a></li>
                     <li><a class="nav-link" href="{{route('createGallery')}}"><i class="fa fa-edit text-aqua"></i>Add Gallery</a></li>
-                    <li><a class="nav-link" href="{{route('gallery-items')}}"><i class="fa fa-circle-o text-aqua"></i>All Gallery Items</a></li>
-                    <li><a class="nav-link" href="{{route('create-gallery-item')}}"><i class="fa fa-circle-o text-aqua"></i>Add Gallery Item</a></li>
+                    <li><a class="nav-link" href="{{route('gallery-items')}}"><i class="fa fa-circle-o text-aqua"></i>All Gallery Images</a></li>
+                    <li><a class="nav-link" href="{{route('create-gallery-item')}}"><i class="fa fa-circle-o text-aqua"></i>Add Gallery Image</a></li>
                 </ul>
             </li>
 
