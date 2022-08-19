@@ -39,6 +39,7 @@ class PartnerController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
+            'type'=>'required',
             'link'=>'required',
             'image'=>'required'
         ]);
@@ -46,10 +47,11 @@ class PartnerController extends Controller
         $img = $request->file('image');
         if($img){
             $name = $img->getClientOriginalName();
-            $path = public_path("frontend/assets/img/partners/");
+            $path = public_path("frontend/assets/img/partners/".$request->input('type'));
             $img->move($path, $name);
             $partner->image = $name;
         }
+        $partner->type = $request->input('type');
         $partner->link = $request->input('link');
         $partner->save();
         return redirect()->route('all-partners')->with('msg','Partner Created Successfully');
@@ -89,6 +91,7 @@ class PartnerController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
+            'type'=>'required',
             'link'=>'required',
             'image'=>'required'
         ]);
@@ -96,16 +99,17 @@ class PartnerController extends Controller
         $img = $request->file('image');
         if($img){
             if($partner->image) {
-                $file_photo = public_path("frontend/assets/img/partners/".$partner->image);
+                $file_photo = public_path("frontend/assets/img/partners/".$request->input('type')."/".$partner->image);
                 if(File::exists($file_photo)){
                     unlink($file_photo);
                 }            
             }
             $name = $img->getClientOriginalName();
-            $path = public_path("frontend/assets/img/partners/");
+            $path = public_path("frontend/assets/img/partners/".$request->input('type'));
             $img->move($path, $name);
             $partner->image = $name;
         }
+        $partner->type = $request->input('type');
         $partner->link = $request->input('link');
         $partner->save();
         return redirect()->route('all-partners')->with('msg','Partner Updated Successfully');
@@ -121,7 +125,7 @@ class PartnerController extends Controller
     {
         $partner = Partner::findOrFail($id);
         if($partner->image) {
-            $file_photo = public_path("frontend/assets/img/partners/".$partner->image);
+            $file_photo = public_path("frontend/assets/img/partners/".$request->input('type')."/".$partner->image);
             if(File::exists($file_photo)){
                 unlink($file_photo);
             }            

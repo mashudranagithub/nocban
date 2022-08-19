@@ -306,14 +306,9 @@
                 </div>
                 <!-- List Diary --> 
                 <div class="carousel owl-carousel" id="links-carousel">
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo4.jpg') }}" class="img-responsive"></a>
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo3.jpg') }}" class="img-responsive"></a>
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo2.jpg') }}" class="img-responsive"></a>
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo1.jpg') }}" class="img-responsive"></a>
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo2.jpg') }}" class="img-responsive"></a>
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo3.jpg') }}" class="img-responsive"></a>
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo4.jpg') }}" class="img-responsive"></a>
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo5.jpg') }}" class="img-responsive"></a>
+                    @foreach($links as $link)
+                        <a href="{{$link->link}}" target="_blank"><img src="{{ asset('frontend/assets/img/partners/'.$link->type.'/'.$link->image) }}" class="img-responsive"></a>
+                    @endforeach
                 </div>
                 <!-- End List Diary -->
             </div>  
@@ -350,15 +345,10 @@
                 </div>     
 
                 <div class="row" class="carousel owl-carousel" id="olympic-partners-carousel">
-                    
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo4.jpg') }}" class="img-responsive"></a>
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo3.jpg') }}" class="img-responsive"></a>
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo2.jpg') }}" class="img-responsive"></a>
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo1.jpg') }}" class="img-responsive"></a>
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo2.jpg') }}" class="img-responsive"></a>
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo3.jpg') }}" class="img-responsive"></a>
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo4.jpg') }}" class="img-responsive"></a>
-                    <a href="http://www.acnolympic.org" target="_blank"><img src="{{ asset('frontend/assets/img/logo5.jpg') }}" class="img-responsive"></a>
+
+                    @foreach($olympic_partners as $partner)
+                        <a href="{{$partner->link}}" target="_blank"><img src="{{ asset('frontend/assets/img/partners/'.$partner->type.'/'.$partner->image) }}" class="img-responsive"></a>
+                    @endforeach
 
                 </div>                          
             </div>  

@@ -35,19 +35,6 @@
             </li>
             <li class="treeview">
                 <a href="javascript:void(0);">
-                    <i class="fa fa-tasks text-yellow"></i>
-                    <span>Partners</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a class="nav-link" href="{{route('all-partners')}}"><i class="fa fa-circle-o text-aqua"></i>All Partners</a></li>
-                    <li><a class="nav-link" href="{{route('create-partner')}}"><i class="fa fa-circle-o text-aqua"></i>Create New Partner</a></li>
-                </ul>
-            </li>
-            <li class="treeview">
-                <a href="javascript:void(0);">
                     <i class="fa fa-picture-o text-aqua"></i>
                     <span>Gallery</span>
                     <span class="pull-right-container">
@@ -59,6 +46,20 @@
                     <li><a class="nav-link" href="{{route('createGallery')}}"><i class="fa fa-edit text-aqua"></i>Add Gallery</a></li>
                     <li><a class="nav-link" href="{{route('gallery-items')}}"><i class="fa fa-circle-o text-aqua"></i>All Gallery Images</a></li>
                     <li><a class="nav-link" href="{{route('create-gallery-item')}}"><i class="fa fa-circle-o text-aqua"></i>Add Gallery Image</a></li>
+                </ul>
+            </li>
+            
+            <li class="treeview">
+                <a href="javascript:void(0);">
+                    <i class="fa fa-tasks text-yellow"></i>
+                    <span>Partners</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a class="nav-link" href="{{route('all-partners')}}"><i class="fa fa-circle-o text-aqua"></i>All Partners</a></li>
+                    <li><a class="nav-link" href="{{route('create-partner')}}"><i class="fa fa-circle-o text-aqua"></i>Create New Partner</a></li>
                 </ul>
             </li>
 

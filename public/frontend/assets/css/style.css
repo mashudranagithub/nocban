@@ -329,6 +329,10 @@ iframe.video {
     z-index: 9999;
 }
 
+.header-post a img {
+    min-width: 100%;
+}
+
 
 /* Panel Box --------------------------------------------*/
 

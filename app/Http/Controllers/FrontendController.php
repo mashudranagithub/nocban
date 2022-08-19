@@ -74,10 +74,14 @@ class FrontendController extends Controller
         $settings = Settings::first();
         $sliders = Slider::orderBy('slider_position', 'asc')->where('active_yn', 'Y')->get();
         $galleries = Gallery::orderBy('created_at', 'DESC')->limit(3)->get();
+        $links = Partner::orderBy('created_at', 'DESC')->where('type', 'links')->get();
+        $olympic_partners = Partner::orderBy('created_at', 'DESC')->where('type', 'olympic')->get();
         return view('frontend.index', compact(
             'settings',
             'sliders',
             'galleries',
+            'links',
+            'olympic_partners'
         ));
     }
 
