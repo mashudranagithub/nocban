@@ -42,24 +42,29 @@ class PostController extends Controller
         $this->validate($request,[
             'category'=>'required',
             'title'=>'required',
-            'file'=>'required',
             'status'=>'required'
         ]);
         $post = new Post();
-        $img = $request->file('file');
+
+        $file = $request->file('file');
+        if($file){
+            $name = $file->getClientOriginalName();
+            $path = public_path("frontend/assets/posts/files/".$request->input('category'));
+            $file->move($path, $name);
+            $post->file = $name;
+        }
+
+        $img = $request->file('image');
         if($img){
             $name = $img->getClientOriginalName();
-            $path = public_path("frontend/assets/files/posts/".$request->input('category'));
+            $path = public_path("frontend/assets/posts/images/".$request->input('category'));
             $img->move($path, $name);
-            $post->file = $name;
+            $post->image = $name;
         }
         $post->category = $request->input('category');
         $post->title = $request->input('title');
         $post->details = $request->input('details');
-        $post->place = $request->input('place');
-        $post->country = $request->input('country');
         $post->start_date = $request->input('start_date');
-        $post->end_date = $request->input('end_date');
         $post->status = $request->input('status');
         $post->save();
         return redirect()->route('all-posts')->with('msg','Post Created Successfully');
@@ -108,26 +113,36 @@ class PostController extends Controller
             'status'=>'required'
         ]);
         $post = Post::find($id);
-        $img = $request->file('file');
-        if($img){
+        $file = $request->file('file');
+        if($file){
             if($post->file) {
-                $existing_file = public_path("frontend/assets/files/posts/".$post->category."/".$post->file);
+                $existing_file = public_path("frontend/assets/posts/files/".$post->category."/".$post->file);
                 if(File::exists($existing_file)){
                     unlink($existing_file);
                 } 
             }
-            $name = $img->getClientOriginalName();
-            $path = public_path("frontend/assets/files/posts/".$request->input('category'));
-            $img->move($path, $name);
+            $name = $file->getClientOriginalName();
+            $path = public_path("frontend/assets/posts/files/".$request->input('category'));
+            $file->move($path, $name);
             $post->file = $name;
+        }
+        $img = $request->file('image');
+        if($img){
+            if($post->image) {
+                $existing_image = public_path("frontend/assets/posts/images/".$post->category."/".$post->image);
+                if(File::exists($existing_image)){
+                    unlink($existing_image);
+                } 
+            }
+            $name = $img->getClientOriginalName();
+            $path = public_path("frontend/assets/posts/images/".$request->input('category'));
+            $img->move($path, $name);
+            $post->image = $name;
         }
         $post->category = $request->input('category');
         $post->title = $request->input('title');
         $post->details = $request->input('details');
-        $post->place = $request->input('place');
-        $post->country = $request->input('country');
         $post->start_date = $request->input('start_date');
-        $post->end_date = $request->input('end_date');
         $post->status = $request->input('status');
         $post->save();
         return redirect()->route('all-posts')->with('msg','Post Updated Successfully');
@@ -143,9 +158,15 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($id);
         if($post->file) {
-            $existing_file = public_path("frontend/assets/files/posts/".$post->category."/".$post->file);
+            $existing_file = public_path("frontend/assets/posts/files/".$post->category."/".$post->file);
             if(File::exists($existing_file)){
                 unlink($existing_file);
+            } 
+        }
+        if($post->image) {
+            $existing_image = public_path("frontend/assets/posts/images/".$post->category."/".$post->image);
+            if(File::exists($existing_image)){
+                unlink($existing_image);
             } 
         }
         $post->delete();

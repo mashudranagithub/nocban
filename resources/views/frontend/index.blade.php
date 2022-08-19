@@ -297,7 +297,7 @@
         </aside>
         <!-- End content Sidebar Center -->
 
-        <!-- content Sidebar Right -->
+        <!-- Links -->
         <aside class="col-xs-12 col-sm-12 col-md-8 col-lg-8">                     
             <!-- Diary -->
             <div class="panel-box">
@@ -314,7 +314,7 @@
             </div>  
             <!-- End Diary --> 
         </aside>
-        <!-- End content Sidebar Right -->
+        <!-- End Links -->
         
         <aside class="col-xs-6 col-sm-6 col-md-3 col-lg-4">
             <!-- Video presentation -->
@@ -336,24 +336,20 @@
 
 
 
-
-        <!-- Experts -->
+        <!-- Olympic Partners -->
         <div class="col-xs-12 col-md-9 col-lg-12">
             <div class="panel-box">                            
                 <div class="titles">
                     <h4>Olympic Partners</h4>
                 </div>     
-
                 <div class="row" class="carousel owl-carousel" id="olympic-partners-carousel">
-
                     @foreach($olympic_partners as $partner)
-                        <a href="{{$partner->link}}" target="_blank"><img src="{{ asset('frontend/assets/img/partners/'.$partner->type.'/'.$partner->image) }}" class="img-responsive"></a>
+                    <a href="{{$partner->link}}" target="_blank"><img src="{{ asset('frontend/assets/img/partners/'.$partner->type.'/'.$partner->image) }}" class="img-responsive"></a>
                     @endforeach
-
                 </div>                          
             </div>  
         </div>
-        <!-- End Experts -->
+        <!-- End Olympic Partners -->
 
 
         

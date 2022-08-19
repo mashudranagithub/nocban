@@ -48,7 +48,7 @@
                     <li><a class="nav-link" href="{{route('create-gallery-item')}}"><i class="fa fa-circle-o text-aqua"></i>Add Gallery Image</a></li>
                 </ul>
             </li>
-            
+
             <li class="treeview">
                 <a href="javascript:void(0);">
                     <i class="fa fa-tasks text-yellow"></i>
@@ -65,20 +65,6 @@
 
             <li class="treeview">
                 <a href="javascript:void(0);">
-                    <i class="fa fa-file text-red"></i>
-                    <span>Pages File Posts</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a class="nav-link" href="{{route('all-file-posts')}}"><i class="fa fa-circle-o text-aqua"></i>All File Posts </a></li>
-                    <li><a class="nav-link" href="{{ route('create-file-post') }}"><i class="fa fa-circle-o text-aqua"></i>Add New File</a></li>
-                </ul>
-            </li>
-
-            <li class="treeview">
-                <a href="javascript:void(0);">
                     <i class="fa fa-calendar text-yellow"></i>
                     <span>Posts</span>
                     <span class="pull-right-container">
@@ -90,35 +76,6 @@
                     <li><a class="nav-link" href="{{ route('create-post') }}"><i class="fa fa-circle-o text-aqua"></i>Create New post </a></li>
                 </ul>
             </li>
-
-            <li class="treeview">
-                <a href="javascript:void(0);">
-                    <i class="fa fa-users text-yellow"></i>
-                    <span>Athletes</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a class="nav-link" href="{{ route('all-athlete') }}"><i class="fa fa-circle-o text-aqua"></i>All Athletes</a></li>
-                    <li><a class="nav-link" href="{{ route('create-athlete') }}"><i class="fa fa-circle-o text-aqua"></i>Create New Athlete </a></li>
-                </ul>
-            </li>
-
-            <li class="treeview">
-                <a href="javascript:void(0);">
-                    <i class="fa fa-users text-yellow"></i>
-                    <span>News</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a class="nav-link" href="{{ route('all-news') }}"><i class="fa fa-circle-o text-aqua"></i>All News</a></li>
-                    <li><a class="nav-link" href="{{ route('create-news') }}"><i class="fa fa-circle-o text-aqua"></i>Create News </a></li>
-                </ul>
-            </li>
-
 
             <li><a class="nav-link" href="{{url('/register')}}"><i class="fa fa-circle-o text-aqua"></i>Create New User </a></li>
         </ul>
