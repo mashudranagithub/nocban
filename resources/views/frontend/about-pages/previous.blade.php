@@ -34,39 +34,34 @@
 
             <!-- About Template-->
             <div class="col-md-12">
-                <!-- Info -->
                 <div class="panel-box">
                     <div class="titles">
-                        <h4><i class="fa fa-rocket"></i>Previous President & SG</h4>
+                        <h4><i class="fa fa-rocket"></i>{{$post->title}}</h4>
                     </div>
-                    <!-- Info ABout --> 
                     <div class="row">
 						<div class="col-md-12">
-							
-							<table width="100%">
-								<tr>
-									<td class="lg_txt"><img src="{{asset('frontend/assets/img/olympic.png')}}"> </td>
-								</tr>
-								<tr>
-									<td class="lg_txt"><h1>President</h1> </td>
-								</tr>
-								<tr>
-									<td class="lg_txt"><h3>Bangladesh Olympic Association</h3></td>
-								</tr>
-							</table>
-							
+                            @if(isset($post->image))
+                            <div class="col-md-4 pull-right">
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="{{asset("frontend/assets/posts/images/".$post->category."/".$post->image)}}" class="img-responsive"> 
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endif
+                            {!!$post->details!!}
 							<br>
-							
-							<iframe src="{{asset('frontend/assets/pdf/Previous-President-&-SG.pdf')}}" frameborder="0" scrolling="no" width="100%" height="800px;" ></iframe>
-							
+							@if($post->file)
+							<iframe src="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}" frameborder="0" scrolling="no" width="100%" height="800px;"></iframe>
+                            @endif
 						</div>
                     </div>
-                    <!-- End Info ABout --> 
                 </div>  
-                <!-- End Info-->
             </div>
             <!-- End About Template-->
-
+            
         </div>                     
     </div>  
     <!-- End Content Central -->

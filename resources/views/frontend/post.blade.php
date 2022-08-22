@@ -20,7 +20,9 @@
             <ul>
                 <li><a href="index.php">Home</a></li>                                     
                 <li>/</li>
-                <li>{{Str::replace('_', ' ', $post->category)}}</li>                                       
+                <li>{{ucfirst(trans(Str::replace('_', ' ', $post->category)))}}</li>
+                
+                @include('frontend.partials.back-button')                                     
             </ul>
         </div>        
     </div>

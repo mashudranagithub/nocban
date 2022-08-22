@@ -98,7 +98,7 @@ Route::group(['middleware' => ['auth']], function() {
 
 Route::get('/', [FrontendController::class, 'homepage'])->name('homepage');
 
-Route::get('/newses', [FrontendController::class, 'newses'])->name('newses');
+Route::get('/newses/{cat}', [FrontendController::class, 'newss'])->name('newss');
 Route::get('/post/{id}', [FrontendController::class, 'post'])->name('post');
 
 Route::get('/all-galleries', [FrontendController::class, 'galleries'])->name('all-galleries');

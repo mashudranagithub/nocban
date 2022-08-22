@@ -58,12 +58,15 @@
         $('.select2').select2()
 
         $("#post-datatable").DataTable({
-            "responsive": false,
-            "lengthChange": true,
+            "responsive": true,
             "searching": true,
-            "autoWidth": false,
+            "autoWidth": true,
             "ordering": true,
-            "paging": true
+            "paging": false,
+            "lengthMenu": [ [30, 25, 50, -1], [30, 25, 50, "All"] ],
+            "lengthChange": false,
+            "processing": false,
+            "bInfo": false,
         });
 
     });

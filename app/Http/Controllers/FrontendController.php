@@ -93,9 +93,10 @@ class FrontendController extends Controller
         ));
     }
 
-    public function newses(){
+    public function newss($cat){
         $settings = Settings::first();
-        $newses = DB::table('posts')->orderBy('id', 'desc')->whereIn('category', ['upcoming_events', 'media_press', 'news'])->paginate(10);
+        $newses = DB::table('posts')->orderBy('id', 'desc')->where('category', $cat)->paginate(10);
+        
         return view('frontend.newses', compact(
             'settings',
             'newses'
@@ -164,8 +165,10 @@ class FrontendController extends Controller
 
     public function noa(){
         $settings = Settings::first();
+        $noa = Post::where('category', 'noa')->get();
         return view('frontend.pages.noa', compact(
             'settings',
+            'noa',
         ));
     }
 
@@ -220,78 +223,101 @@ class FrontendController extends Controller
 
     public function history(){
         $settings = Settings::first();
+        $post = Post::latest()->where('category', 'history')->first();
         return view('frontend.about-pages.history', compact(
             'settings',
+            'post'
         ));
     }
 
     public function mission(){
         $settings = Settings::first();
-        return view('frontend.about-pages.mission', compact(
+        $post = Post::latest()->where('category', 'mission_vission')->first();
+        return view('frontend.about-pages.history', compact(
             'settings',
+            'post'
         ));
     }
 
     public function executive(){
         $settings = Settings::first();
-        return view('frontend.about-pages.executive', compact(
+        $post = Post::latest()->where('category', 'ex_committee')->first();
+        return view('frontend.about-pages.history', compact(
             'settings',
+            'post'
         ));
     }
 
     public function general(){
         $settings = Settings::first();
-        return view('frontend.about-pages.general', compact(
+        $post = Post::latest()->where('category', 'gn_assembly')->first();
+        return view('frontend.about-pages.history', compact(
             'settings',
+            'post'
         ));
     }
 
     public function previous(){
         $settings = Settings::first();
-        return view('frontend.about-pages.previous', compact(
+        $post = Post::latest()->where('category', 'prev_president_sg')->first();
+        return view('frontend.about-pages.history', compact(
             'settings',
+            'post'
         ));
     }
 
     public function administration(){
         $settings = Settings::first();
+        $post = Post::latest()->where('category', 'admin')->first();
         return view('frontend.about-pages.administration', compact(
             'settings',
+            'post'
         ));
     }
 
     public function committees(){
         $settings = Settings::first();
-        return view('frontend.about-pages.committees', compact(
+        $post = Post::latest()->where('category', 'commissions_committees')->first();
+        return view('frontend.about-pages.history', compact(
             'settings',
+            'post'
         ));
+        
     }
 
     public function constitution(){
         $settings = Settings::first();
-        return view('frontend.about-pages.constitution', compact(
+        $post = Post::latest()->where('category', 'constitution')->first();
+        return view('frontend.about-pages.history', compact(
             'settings',
+            'post'
         ));
     }
 
     public function organogram(){
         $settings = Settings::first();
+        $post = Post::latest()->where('category', 'organogram')->first();
         return view('frontend.about-pages.organogram', compact(
             'settings',
+            'post'
         ));
     }
 
     public function doping(){
         $settings = Settings::first();
-        return view('frontend.about-pages.doping', compact(
+        $post = Post::latest()->where('category', 'anti_doping')->first();
+        return view('frontend.about-pages.history', compact(
             'settings',
+            'post'
         ));
     }
 
     public function athleteProfiles(){
         $settings = Settings::first();
-        return view('frontend.about-pages.athleteProfiles', compact(
+        $post = Post::latest()->where('category', 'athlete_profiles')->first();
+        return view('frontend.about-pages.history', compact(
             'settings',
+            'post'
         ));
     }
 

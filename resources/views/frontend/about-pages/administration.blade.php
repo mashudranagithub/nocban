@@ -32,6 +32,40 @@
     <div class="container padding-top">
         <div class="row">
 
+
+            @if($post->file)
+            <!-- About Template-->
+            <div class="col-md-12">
+                <div class="panel-box">
+                    <div class="titles">
+                        <h4><i class="fa fa-rocket"></i>{{$post->title}}</h4>
+                    </div>
+                    <div class="row">
+						<div class="col-md-12">
+                            @if(isset($post->image))
+                            <div class="col-md-4 pull-right">
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="{{asset("frontend/assets/posts/images/".$post->category."/".$post->image)}}" class="img-responsive"> 
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endif
+                            {!!$post->details!!}
+							<br>
+							@if($post->file)
+							<iframe src="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}" frameborder="0" scrolling="no" width="100%" height="800px;"></iframe>
+                            @endif
+						</div>
+                    </div>
+                </div>  
+            </div>
+            <!-- End About Template-->
+
+            @else
+
             <!-- About Template-->
             <div class="col-md-12">
                 <!-- Info -->
@@ -107,6 +141,8 @@
                 <!-- End Info-->
             </div>
             <!-- End About Template-->
+
+            @endif
 
         </div>                     
     </div>  

@@ -67,7 +67,8 @@
           
                     </ul>
                     <div class="clearfix" style="margin-bottom: 15px;"></div>
-                    <a href="{{route('newses')}}" class="btn btn-default pull-right">View More</a>
+                    @php $cat = $upcoming_events[0]->category; @endphp
+                    <a href="{{route('newss', $cat)}}" class="btn btn-default pull-right">View More</a>
                 </div>
                 <!-- Tab One - Feature News -->
                 
@@ -97,8 +98,9 @@
                     <!-- End media post--> 
                     
                     <div class="clearfix" style="margin-bottom: 15px;"></div>
+                    @php $cat = $media_press[0]->category; @endphp
                     
-                    <a href="{{route('newses')}}" class="btn btn-default pull-right">View More</a>  
+                    <a href="{{route('newss', $cat)}}" class="btn btn-default pull-right">View More</a>  
                 </div>
                 <!-- Tab Two - Players Staff -->
 
@@ -171,11 +173,10 @@
         <div class="col-xs-12 col-md-6 col-lg-8">                     
             <!-- Recent Post -->
             <div class="panel-box">
-            
+            @php $cat = $recent_news[0]->category; @endphp
                 <div class="titles">
-                    <h4>
-                        Recent News                        
-                        <a href="{{route('newses')}}" class="btn btn-default btn-xs pull-right">View More</a>  
+                    <h4>Recent News                        
+                        <a href="{{route('newss', $cat)}}" class="btn btn-default btn-xs pull-right">View More</a>  
                     </h4>
                 </div>
 

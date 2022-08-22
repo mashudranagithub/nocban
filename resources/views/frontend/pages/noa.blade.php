@@ -37,16 +37,14 @@
                 <!-- Info -->
                 <div class="panel-box">
                     <div class="titles">
-                        <h4><i class="fa fa-rocket"></i><a target="_blank" href="{{asset('frontend/assets/pdf/NOA_m_c_List_Photo_Phone.pdf')}}">NOA Management Committee List</a></h4>
-                        <h4><i class="fa fa-rocket"></i><a target="_blank" href="{{asset('frontend/assets/pdf/NOA-Constitution.pdf')}}">NOA Constitution</a></h4>
+
+                        @foreach($noa as $post)
+                            <h4><i class="fa fa-rocket"></i><a target="_blank" href="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}">{{$post->title}}</a></h4>
+                        @endforeach
+
                     </div>
                     <!-- Info ABout --> 
-                    <div class="row">
-                        <div class="col-md-12">
-                          
-                        </div>
-                    </div>
-                    <!-- End Info ABout --> 
+                    
                 </div>  
                 <!-- End Info-->
             </div>

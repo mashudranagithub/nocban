@@ -42,12 +42,12 @@
                     <!-- Info ABout --> 
                     <div class="row">
                         <div class="col-md-12">
-                            <h4>Elected Executive Committee of BOA 2021</h4>
+                            <h4>{{$ex_committee->title}}</h4>
                                                                     
 							<br>
-							
-							<iframe src="{{asset('frontend/assets/pdf/BOA_EC_List_2021_English.pdf')}}" frameborder="0" scrolling="no" width="100%" height="800px;"></iframe>
-
+							@if($ex_committee->file)
+							<iframe src="{{asset("frontend/assets/posts/files/".$ex_committee->category."/".$ex_committee->file)}}" frameborder="0" scrolling="no" width="100%" height="800px;"></iframe>
+                            @endif
                         </div>
                     </div>
                     <!-- End Info ABout --> 

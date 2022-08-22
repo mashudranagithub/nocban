@@ -38,17 +38,17 @@
         <table id="post-datatable" class="table table-striped dataTable">
             <thead>
                 <tr>
-                    <th class="sorting sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending">SI</th>
-                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Category</th>
-                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Title</th>
-                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1">File Name</th>
-                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Status</th>
-                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Actions</th>
+                    <th class="sorting sorting_asc" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">SI</th>
+                    <th class="sorting" tabindex="0"  rowspan="1" colspan="1">Category</th>
+                    <th class="sorting" tabindex="0"  rowspan="1" colspan="1">Title</th>
+                    <th class="sorting" tabindex="0"  rowspan="1" colspan="1">File Name</th>
+                    <th class="sorting" tabindex="0"  rowspan="1" colspan="1">Status</th>
+                    <th class="sorting" tabindex="0"  rowspan="1" colspan="1">Actions</th>
                 </tr>
             </thead>
             <tbody>
                 @php $i=0; @endphp @foreach ($posts as $post)
-                <tr class="odd">
+                <tr>
                     <td>{{ ++$i }}</td>
                     <td>{{ $post->category }}</td>
                     <td>{{ $post->title }}</td>
@@ -66,6 +66,7 @@
             </tbody>
         </table>
     </div>
+    {{$posts->links()}}
 </div>
 </div>
 

@@ -75,13 +75,13 @@
                 <textarea id="bhw-ckeditor" class="form-control" row="5" col="12" name="details">{{$post->details}}</textarea>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="form-group">
                 <label for="start_date">Start Date</label>
                 <input name="start_date" id="start_date" type="date" class="form-control" @if($post->start_date) value="{{$post->start_date}}" @endif>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="form-group">
                 <label for="status" class="required">Post Status</label>
                 <select name="status" id="status" class="form-control" required>
@@ -90,11 +90,18 @@
                 </select>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="form-group">
                 <label for="file" class="">Post File</label>
-                <input name="file" type="file" id="file">
+                <input name="file" type="file" id="file" class="form-control">
                 <p class="help-block text-red">Max Size: 5 MB and compress the file before upload</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="image" class="">Post Image</label>
+                <input class="form-control" name="image" type="file" id="image" accept=".jpg, .jpeg">
+                <p class="help-block text-red">Max Size: 2 MB and compress the file before upload</p>
             </div>
         </div>
         @if($post->file)
@@ -106,7 +113,7 @@
         @if($post->image)
         <div class="col-md-12">
             <h3>Previous Image</h3>
-            <img width="100%" height="500px;" src="{{ asset('frontend/assets/posts/images/'.$post->category.'/'.$post->image) }}">
+            <img width="100%" height="auto;" src="{{ asset('frontend/assets/posts/images/'.$post->category.'/'.$post->image) }}">
         </div>
         @endif
         <div class="col-md-12">

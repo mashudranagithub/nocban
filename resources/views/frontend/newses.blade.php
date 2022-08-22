@@ -6,7 +6,7 @@
 <section class="section-title img-about">
     <div class="overlay-bg"></div>
     <div class="container">
-        <h1>News</h1>
+        <h1>{{ ucfirst(trans(Str::replace('_', ' ', $newses[0]->category)));}}</h1>
     </div>
 </section>
 <!-- End Section Title --> 
@@ -19,7 +19,9 @@
             <ul>
                 <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
-                <li>All News</li>
+                <li>{{ ucfirst(trans(Str::replace('_', ' ', $newses[0]->category)));}}</li>
+                
+                @include('frontend.partials.back-button')
             </ul>
         </div>        
     </div>

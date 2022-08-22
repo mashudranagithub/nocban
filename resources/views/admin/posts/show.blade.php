@@ -19,8 +19,8 @@
 
 
 
-    @if($post->file)
-<div class="row">
+    @if($post->category)
+    <div class="row">
         <div class="col-md-4">
             <div class="form-group">
                     <label for="category" class="required">Post Type/Category</label>
@@ -82,29 +82,18 @@
                 </select>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label for="file" class="">Post File</label>
-                <input name="file" type="file" id="file">
-                <p class="help-block text-red">Max Size: 5 MB and compress the file before upload</p>
-            </div>
-        </div>
         @if($post->file)
         <div class="col-md-12">
-            <h3>Previous File</h3>
+            <h3>Post File</h3>
             <iframe width="100%" height="500px;" src="{{ asset('frontend/assets/posts/files/'.$post->category.'/'.$post->file) }}" frameborder="1"></iframe>
         </div>
         @endif
         @if($post->image)
         <div class="col-md-12">
-            <h3>Previous Image</h3>
-            <img width="100%" height="500px;" src="{{ asset('frontend/assets/posts/images/'.$post->category.'/'.$post->image) }}">
+            <h3>Post Image</h3>
+            <img width="100%" height="auto;" src="{{ asset('frontend/assets/posts/images/'.$post->category.'/'.$post->image) }}">
         </div>
         @endif
-        <div class="col-md-12">
-            <hr>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
     </div>
     @endif
 

@@ -6,7 +6,7 @@
 <section class="section-title img-about">
     <div class="overlay-bg"></div>
     <div class="container">
-        <h1>Organogramities</h1>
+        <h1>{{$post->title}}</h1>
     </div>
 </section>
 <!-- End Section Title --> 
@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
-                <li>Organogram</li>                                       
+                <li>{{$post->title}}</li>                                       
             </ul>
         </div>        
     </div>
@@ -32,22 +32,27 @@
     <div class="container padding-top">
         <div class="row">
 
+
             <!-- About Template-->
             <div class="col-md-12">
-                <!-- Info -->
                 <div class="panel-box">
                     <div class="titles">
-                        <h4><i class="fa fa-rocket"></i>Organogram</h4>
+                        <h4><i class="fa fa-rocket"></i>{{$post->title}}</h4>
                     </div>
-                    <!-- Info ABout --> 
                     <div class="row">
-                        <div class="col-md-12">
-                            <img src="{{asset('frontend/assets/img/organogram.JPG')}}" class="img-responsive">
-                        </div>
+						<div class="col-md-12">
+                            @if(isset($post->image))
+                                <img src="{{asset("frontend/assets/posts/images/".$post->category."/".$post->image)}}" class="img-responsive"> 
+                            </div>
+                            @endif
+                            {!!$post->details!!}
+							<br>
+							@if($post->file)
+							<iframe src="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}" frameborder="0" scrolling="no" width="100%" height="800px;"></iframe>
+                            @endif
+						</div>
                     </div>
-                    <!-- End Info ABout --> 
                 </div>  
-                <!-- End Info-->
             </div>
             <!-- End About Template-->
 
