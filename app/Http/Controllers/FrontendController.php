@@ -73,15 +73,41 @@ class FrontendController extends Controller
 
         $settings = Settings::first();
         $sliders = Slider::orderBy('slider_position', 'asc')->where('active_yn', 'Y')->get();
+
+        $upcoming_events = Post::orderBy('id', 'desc')->where('category', 'upcoming_events')->get();
+        $media_press = Post::orderBy('id', 'desc')->where('category', 'media_press')->get();
+        $recent_news = Post::orderBy('id', 'desc')->where('category', 'news')->paginate(2);
+
         $galleries = Gallery::orderBy('created_at', 'DESC')->limit(3)->get();
         $links = Partner::orderBy('created_at', 'DESC')->where('type', 'links')->get();
         $olympic_partners = Partner::orderBy('created_at', 'DESC')->where('type', 'olympic')->get();
         return view('frontend.index', compact(
             'settings',
             'sliders',
+            'upcoming_events',
+            'media_press',
+            'recent_news',
             'galleries',
             'links',
             'olympic_partners'
+        ));
+    }
+
+    public function newses(){
+        $settings = Settings::first();
+        $newses = DB::table('posts')->orderBy('id', 'desc')->whereIn('category', ['upcoming_events', 'media_press', 'news'])->paginate(10);
+        return view('frontend.newses', compact(
+            'settings',
+            'newses'
+        ));
+    }
+
+    public function post($id){
+        $settings = Settings::first();
+        $post = Post::find($id);
+        return view('frontend.post', compact(
+            'settings',
+            'post'
         ));
     }
 

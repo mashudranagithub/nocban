@@ -51,45 +51,23 @@
                 <div class="tab-pane active" id="upcomming-events">
                     <ul id="events-carousel row" class="events-carousel padding-top">
 
+                        @foreach($upcoming_events as $u_event)
                         <li class="col-sm-4">
                             <div class="header-post">
                                 <div class="date">
-                                    July 2022
+                                    {{$u_event->start_date}}
                                 </div>
-                                <a href="post.php"><img src="{{ asset('frontend/assets/uploads/post/thumbs/konya2021.jpg') }}" alt="Links of 5th Islamic Solidarity Games"></a>
+                                <a href="{{route('post', $u_event->id)}}"><img src="{{asset("frontend/assets/posts/images/".$u_event->category."/".$u_event->image)}}" alt="{{$u_event->title}}"></a>
                             </div>
                             <div class="info-post">
-                                <h4><a href="post.php">Links of 5th Islamic Solidarity Games</a></h4>
+                                <h4><a href="{{route('post', $u_event->id)}}">{{$u_event->title}}</a></h4>
                             </div>
-                        </li>                      
-
-                        <li class="col-sm-4">
-                            <div class="header-post">
-                                <div class="date">
-                                    July 2022
-                                </div>
-                                <a href="post.php"><img src="{{ asset('frontend/assets/uploads/post/thumbs/konya2021.jpg') }}" alt="Links of 5th Islamic Solidarity Games"></a>
-                            </div>
-                            <div class="info-post">
-                                <h4><a href="post.php">Links of 5th Islamic Solidarity Games</a></h4>
-                            </div>
-                        </li>                      
-
-                        <li class="col-sm-4">
-                            <div class="header-post">
-                                <div class="date">
-                                    July 2022
-                                </div>
-                                <a href="post.php"><img src="{{ asset('frontend/assets/uploads/post/thumbs/konya2021.jpg') }}" alt="Links of 5th Islamic Solidarity Games"></a>
-                            </div>
-                            <div class="info-post">
-                                <h4><a href="post.php">Links of 5th Islamic Solidarity Games</a></h4>
-                            </div>
-                        </li>                      
+                        </li>
+                        @endforeach
           
                     </ul>
                     <div class="clearfix" style="margin-bottom: 15px;"></div>
-                    <a href="news.php" class="btn btn-default pull-right">View More</a>
+                    <a href="{{route('newses')}}" class="btn btn-default pull-right">View More</a>
                 </div>
                 <!-- Tab One - Feature News -->
                 
@@ -99,56 +77,28 @@
                     <!-- media post-->  
                     <ul id="media-carousel row" class="media-carousel padding-top">
                         
-
+                        @foreach($media_press as $m_press)
                         <!-- Item media post -->  
                         <li class="col-sm-4">
                             <div class="header-post">
                                 <div class="date">
-                                    June 2022
+                                    {{$m_press->start_date}}
                                 </div>
-                                <a href="post.php"><img src="{{ asset('frontend/assets/uploads/post/Olympic_Day_2022.jpg') }}" alt="Olympic Day 2022"></a>
+                                <a href="{{route('post', $m_press->id)}}"><img src="{{asset("frontend/assets/posts/images/".$m_press->category."/".$m_press->image)}}" alt="{{$m_press->title}}"></a>
                             </div>
                             <div class="info-post">
-                                <h4><a href="post.php">Olympic Day 2022</a></h4>
+                                <h4><a href="{{route('post', $m_press->id)}}">{{$m_press->title}}</a></h4>
                             </div>
                         </li>
-                        <!-- End Item media post -->                        
-
-                        <!-- Item media post -->  
-                        <li class="col-sm-4">
-                            <div class="header-post">
-                                <div class="date">
-                                    June 2022
-                                </div>
-                                <a href="post.php"><img src="{{ asset('frontend/assets/uploads/post/Olympic_Day_2022.jpg') }}" alt="Olympic Day 2022"></a>
-                            </div>
-                            <div class="info-post">
-                                <h4><a href="post.php">Olympic Day 2022</a></h4>
-                            </div>
-                        </li>
-                        <!-- End Item media post -->                        
-
-                        <!-- Item media post -->  
-                        <li class="col-sm-4">
-                            <div class="header-post">
-                                <div class="date">
-                                    June 2022
-                                </div>
-                                <a href="post.php"><img src="{{ asset('frontend/assets/uploads/post/Olympic_Day_2022.jpg') }}" alt="Olympic Day 2022"></a>
-                            </div>
-                            <div class="info-post">
-                                <h4><a href="post.php">Olympic Day 2022</a></h4>
-                            </div>
-                        </li>
-                        <!-- End Item media post -->                        
-                    
+                        <!-- End Item media post -->  
+                        @endforeach
                                     
                     </ul>
                     <!-- End media post--> 
                     
                     <div class="clearfix" style="margin-bottom: 15px;"></div>
                     
-                    <a href="news.php" class="btn btn-default pull-right">View More</a>  
+                    <a href="{{route('newses')}}" class="btn btn-default pull-right">View More</a>  
                 </div>
                 <!-- Tab Two - Players Staff -->
 
@@ -225,49 +175,33 @@
                 <div class="titles">
                     <h4>
                         Recent News                        
-                        <a href="news.php" class="btn btn-default btn-xs pull-right">View More</a>  
+                        <a href="{{route('newses')}}" class="btn btn-default btn-xs pull-right">View More</a>  
                     </h4>
                 </div>
 
-                <!-- Post Item -->
-                <div class="post-item">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="img-hover">
-                            <img src="{{ asset('frontend/assets/uploads/post/thumbs/konya2021.jpg') }}" alt="Official Photo Session of Bangladesh Contingent for 4th Islamic Solidarity Games" class="img-responsive">
-                               <div class="overlay"><a href="post.php">+</a></div>
+                    @foreach($recent_news as $news)
+                    <!-- Post Item -->
+                    <div class="post-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="img-hover">
+                                    <img src="{{asset("frontend/assets/posts/images/".$news->category."/".$news->image)}}" alt="{{$news->title}}" class="img-responsive">
+                                    <div class="overlay"><a href="{{route('post', $news->id)}}">+</a></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-8">
-                            <h4><a href="post.php">Official Photo Session of Bangladesh Contingent for 4th Islamic Solidarity Games</a></h4>
-                            <p class="data-info">
-                            	April 30 2017
-                            </p>
-                            <a href="post.php">Read More [+]</a>
-                        </div>
-                   </div>
-                </div>
-                 <!-- End Post Item -->
+                            <div class="col-md-8">
+                                <h4><a href="{{route('post', $news->id)}}">{{$news->title}}</a></h4>
+                                <p class="data-info">
+                                    {{$news->start_date}}
+                                </p>
+                                <a href="{{route('post', $news->id)}}">Read More [+]</a>
+                            </div>
+                       </div>
+                    </div>
+                    <!-- End Post Item -->                        
+                    @endforeach
 
-                <!-- Post Item -->
-                <div class="post-item">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="img-hover">
-                            <img src="{{ asset('frontend/assets/uploads/post/thumbs/konya2021.jpg') }}" alt="Official Photo Session of Bangladesh Contingent for 4th Islamic Solidarity Games" class="img-responsive">
-                               <div class="overlay"><a href="post.php">+</a></div>
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <h4><a href="post.php">Official Photo Session of Bangladesh Contingent for 4th Islamic Solidarity Games</a></h4>
-                            <p class="data-info">
-                            	April 30 2017
-                            </p>
-                            <a href="post.php">Read More [+]</a>
-                        </div>
-                   </div>
-                </div>
-                 <!-- End Post Item -->
+                    {{$recent_news->links()}}
 
             </div>  
             <!-- End Recent Post -->                              
