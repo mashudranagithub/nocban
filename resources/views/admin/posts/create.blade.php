@@ -54,6 +54,8 @@
                         <option value="athlete_profiles">About BOA - Athlete Profiles</option>
                         <option value="affiliated_organizations">Affiliated Organizations</option>
                         <option value="activities">Activities</option>
+                        <option value="games_results_national">Games & Results - National</option>
+                        <option value="games_results_international">Games & Results - International</option>
                         <option value="sports_international">Sports Awards - International</option>
                         <option value="sports_regional">Sports Awards - Regional</option>
                         <option value="sports_national">Sports Awards - National</option>

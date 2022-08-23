@@ -323,8 +323,10 @@ class FrontendController extends Controller
 
     public function international(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'games_results_international')->get();
         return view('frontend.games-results.international.international', compact(
             'settings',
+            'posts'
         ));
     }
 
@@ -421,8 +423,10 @@ class FrontendController extends Controller
 
     public function national(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'games_results_national')->get();
         return view('frontend.games-results.national.national', compact(
             'settings',
+            'posts',
         ));
     }
 

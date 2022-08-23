@@ -51,6 +51,8 @@
                         <option @if($post->category == "athlete_profiles") selected @endif value="athlete_profiles">About BOA - Athlete Profiles</option>
                         <option @if($post->category == "affiliated_organizations") selected @endif value="affiliated_organizations">Affiliated Organizations</option>
                         <option @if($post->category == "activities") selected @endif value="activities">Activities</option>
+                        <option @if($post->category == "games_results_national") selected @endif value="games_results_national">Games & Results - National</option>
+                        <option @if($post->category == "games_results_international") selected @endif value="games_results_international">Games & Results - International</option>
                         <option @if($post->category == "sports_international") selected @endif value="sports_international">Sports Awards - International</option>
                         <option @if($post->category == "sports_regional") selected @endif value="sports_regional">Sports Awards - Regional</option>
                         <option @if($post->category == "sports_national") selected @endif value="sports_national">Sports Awards - National</option>
