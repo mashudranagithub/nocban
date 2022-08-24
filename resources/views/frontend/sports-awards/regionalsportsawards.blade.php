@@ -44,7 +44,11 @@
                     <!-- Info ABout --> 
                     <div class="row">
                         <div class="col-md-12">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, veritatis omnis nulla tenetur vitae doloremque quidem libero officiis aspernatur reiciendis, dolorum ad, tempore ullam optio itaque veniam. Neque deserunt blanditiis aspernatur quisquam? Quasi eligendi nostrum consectetur cumque sapiente magnam minus natus, possimus mollitia commodi quaerat, harum eos corporis molestias saepe voluptatem praesentium in iste amet, at ut ullam id atque.</p>
+
+                            @foreach($posts as $post)
+                                <h4><a target="_blank" href="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}">{{$post->title}}</a></h4>
+                            @endforeach
+                            
                         </div>
                     </div>
                     <!-- End Info ABout --> 

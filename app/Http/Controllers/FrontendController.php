@@ -174,36 +174,46 @@ class FrontendController extends Controller
 
     public function boaantidoping(){
         $settings = Settings::first();
-        return view('frontend.pages.boaantidoping', compact(
+        $post = Post::latest()->where('category', 'boa_anti_doping')->first();
+        return view('frontend.post', compact(
             'settings',
+            'post'
         ));
     }
 
     public function athletes(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'boa_athlete_commission')->get();
         return view('frontend.pages.athletes', compact(
             'settings',
+            'posts'
         ));
     }
 
     public function nationalsportsawards(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'sports_national')->get();
         return view('frontend.sports-awards.nationalsportsawards', compact(
             'settings',
+            'posts'
         ));
     }
 
     public function regionalsportsawards(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'sports_regional')->get();
         return view('frontend.sports-awards.regionalsportsawards', compact(
             'settings',
+            'posts'
         ));
     }
 
     public function internationalsportsawards(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'sports_international')->get();
         return view('frontend.sports-awards.internationalsportsawards', compact(
             'settings',
+            'posts'
         ));
     }
 
@@ -216,8 +226,14 @@ class FrontendController extends Controller
 
     public function activities(){
         $settings = Settings::first();
-        return view('frontend.pages.activities', compact(
+        // return view('frontend.pages.activities', compact(
+        //     'settings',
+        // ));
+
+        $post = Post::latest()->where('category', 'activities')->first();
+        return view('frontend.post', compact(
             'settings',
+            'post'
         ));
     }
 

@@ -7,7 +7,7 @@
 <section class="section-title img-about">
     <div class="overlay-bg"></div>
     <div class="container">
-        <h1>{{$post->title}}</h1>
+        <h1>@if($post) {{$post->title}} @endif</h1>
     </div>
 </section>
 <!-- End Section Title --> 
@@ -20,7 +20,7 @@
             <ul>
                 <li><a href="index.php">Home</a></li>                                     
                 <li>/</li>
-                <li>{{ucfirst(trans(Str::replace('_', ' ', $post->category)))}}</li>
+                <li>@if($post) {{ucfirst(trans(Str::replace('_', ' ', $post->category)))}}@endif</li>
                 
                 @include('frontend.partials.back-button')                                     
             </ul>
@@ -28,13 +28,13 @@
     </div>
 
     <div class="semiboxshadow text-center">
-        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="{{$post->title}}">
+        <img src="{{asset('frontend/assets/img/img-theme/shp.png')}}" class="img-responsive" alt="@if($post) {{$post->title}} @endif">
     </div>
 
     <!-- Content Central -->
     <div class="container padding-top">
         <div class="row">
-
+            @if($post) 
             <!-- About Template-->
             <div class="col-md-12">
                 <!-- Info -->
@@ -69,6 +69,9 @@
                 <!-- End Info-->
             </div>
             <!-- End About Template-->
+            @else
+            <p>No data found !!</p>
+            @endif
 
         </div>                     
     </div>  

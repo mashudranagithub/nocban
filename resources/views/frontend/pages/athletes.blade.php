@@ -37,6 +37,11 @@
                 <!-- Info -->
                 <div class="panel-box">
                     <div class="titles">
+
+                        @foreach($posts as $post)
+                            <h4><i class="fa fa-rocket"></i><a target="_blank" href="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}">{{$post->title}}</a></h4>
+                        @endforeach
+
                         <h4><i class="fa fa-rocket"></i><a target="_blank" href="{{asset('frontend/assets/pdf/BOA-Athletes-Commission.pdf')}}">BOA Athletes Commission</a></h4>
                         <h4><i class="fa fa-rocket"></i><a target="_blank" href="{{asset('frontend/assets/pdf/BOA-Athletes-Commission.pdf')}}">BOA Athletes Commission</a></h4>
 					</div>

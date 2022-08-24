@@ -45,6 +45,10 @@
                     <div class="row">
                         <div class="col-md-12">
 
+                            @foreach($posts as $post)
+                                <h4><a target="_blank" href="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}">{{$post->title}}</a></h4>
+                            @endforeach
+
                             <h4><a target="_blank" href="{{asset('frontend/assets/pdf/International_Sports_Awards_Olympic_OCA_Merit_Award.pdf')}}">OCA Merit Award 2014</a></h4>
                             <h4><a target="_blank" href="{{asset('frontend/assets/pdf/International_Sports_Awards.pdf')}}">ANOC Award 2018</a></h4>
 
