@@ -330,7 +330,8 @@ iframe.video {
 }
 
 .header-post a img {
-    min-width: 100%;
+    width: 100%;
+    /* djkdj */
 }
 
 
@@ -412,7 +413,7 @@ iframe.video {
 }
 
 .tab-content {
-    margin-left: 45px;
+    padding: 0px 25px;
 }
 
 .nav-tabs li {

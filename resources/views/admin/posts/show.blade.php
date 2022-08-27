@@ -53,7 +53,7 @@
                         <option @if($post->category == "asian_games_19th") selected @endif value="asian_games_19th">19th Asian Games</option>
                         <option @if($post->category == "asian_games") selected @endif value="asian_games">Asian Games</option>
                         <option @if($post->category == "boa_election") selected @endif value="boa_election">BOA Election</option>
-                        <option @if($post->category == "esports_road") selected @endif value="esports_road">Esports-road to Asian Games 2022</option>
+                        <option @if($post->category == "esports_road") selected @endif value="esports_road">Esports-road to Asian Games</option>
                     </select>
             </div>
         </div>

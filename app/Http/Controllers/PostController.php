@@ -21,6 +21,27 @@ class PostController extends Controller
         return view('admin.posts.index', compact('posts'));
     }
 
+    public function gamesResults()
+    {
+        $posts = DB::table('posts')->orderBy('id', 'desc')
+                ->whereIn('category', [
+                    'games_results_national',
+                    'g_r_int_asian',
+                    'g_r_int_asian_beach',
+                    'g_r_int_asian_youth',
+                    'g_r_int_common_wealth',
+                    'g_r_int_common_wealth_youth',
+                    'g_r_int_children',
+                    'g_r_int_islamic',
+                    'g_r_int_summer',
+                    'g_r_int_youth_olympic',
+                    'g_r_int_south_asian',
+                    'g_r_int_south_asian_beach'
+                    ])
+                ->paginate(10);
+        return view('admin.games-results.index', compact('posts'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -29,6 +50,11 @@ class PostController extends Controller
     public function create()
     {
         return view('admin.posts.create');
+    }
+
+    public function gamesResultCreate()
+    {
+        return view('admin.games-results.create');
     }
 
     /**
@@ -84,6 +110,14 @@ class PostController extends Controller
         ));
     }
 
+    public function gamesResultShow($id)
+    {
+        $post = Post::find($id);
+        return view('admin.games-results.show', compact(
+            'post'
+        ));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -94,6 +128,14 @@ class PostController extends Controller
     {
         $post = Post::find($id);
         return view('admin.posts.edit', compact(
+            'post'
+        ));
+    }
+
+    public function gamesResultEdit($id)
+    {
+        $post = Post::find($id);
+        return view('admin.games-results.edit', compact(
             'post'
         ));
     }

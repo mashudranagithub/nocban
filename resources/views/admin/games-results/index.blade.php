@@ -5,7 +5,7 @@
     <div class="pull-left">
         <ol class="breadcrumb">
             <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li class="active">Posts</li>
+            <li class="active">Games & Results</li>
         </ol>
     </div>
 </section>
@@ -14,16 +14,16 @@
 <div class="row mb-4">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h3>Posts List</h3>
+            <h3>Games & Results List</h3>
         </div>
         <div class="pull-right">
-            <a class="btn btn-success" href="{{ route('create-post') }}"> Create New post</a>
+            <a class="btn btn-success" href="{{ route('create-games-result') }}"> Create New Games & Result</a>
         </div>
     </div>
 </div>
 
 
-@if ($message = Session::get('msg'))
+@if($message = Session::get('msg'))
 <div class="alert alert-info">
     <p>{{ $message }}</p>
 </div>
@@ -52,11 +52,13 @@
                     <td>{{ $post->file }}</td>
                     <td>@if($post->status == 1) <button class="btn btn-success badge">Active</button> @else <button class="btn btn-warning badge">In-active</button> @endif</td>
                     <td style="display: flex; justify-content: space-between;">
-                        <a class="btn btn-info" href="{{ route('show-post',$post->id) }}"><i class="fa fa-eye"></i></a>
-                        <a class="btn btn-primary" href="{{ route('edit-post',$post->id) }}"><i class="fa fa-edit"></i></a>
+                        <a class="btn btn-info" href="{{ route('show-games-result', $post->id) }}"><i class="fa fa-eye"></i></a>
+                        <a class="btn btn-primary" href="{{ route('edit-games-result', $post->id) }}"><i class="fa fa-edit"></i></a>
                         <form action="{{ route('delete-post',$post->id) }}" method="POST">
-                            {!! Form::open(['method' => 'DELETE','route' => ['delete-post', $post->id],'style'=>'display:inline']) !!} {!! Form::submit('Delete', ['class' =>
-                            'btn btn-danger']) !!} {!! Form::close() !!}
+                            {!! Form::open(['method' => 'DELETE','route' => ['delete-post', $post->id],'style'=>'display:inline']) !!}
+                            {!! Form::submit('Delete', ['class' =>'btn btn-danger']) !!}
+                            <i class="fa fa-delete"></i>
+                            {!! Form::close() !!}
                         </form>
                     </td>
                 </tr>

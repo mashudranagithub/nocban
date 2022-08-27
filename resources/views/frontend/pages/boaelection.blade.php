@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
-                <li><a href="{{route('boaelec2021')}}">BOA Election</a> </li>  
+                <li><a href="{{route('boaelection')}}">BOA Election</a> </li>  
                 <li>/</li>
                 
                 @include('frontend.partials.back-button')
@@ -61,6 +61,16 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                            @if($posts)
+                                                @foreach($posts as $post)
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td><a target="_blank" href="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}">{{$post->title}}</a></td>
+                                                        <td><a target="_blank" href="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}"><i class="fa fa-eye"></i></a></td>
+                                                    </tr>
+                                                @endforeach
+                                                @else
+
                                                     <tr>
                                                         <td>1</td>
                                                         <td><a target="_blank" href="{{asset('frontend/assets/electionFiles/Final Result of BOA EC Member Election 2022.docx.pdf')}}">Final Result of BOA Executive Committee Member Election 2022</a></td>
@@ -136,6 +146,8 @@
                                                         <td><a target="_blank" href="{{asset('frontend/assets/electionFiles/Circular.pdf')}}">Election Circular</a></td>
                                                         <td><a target="_blank" href="{{asset('frontend/assets/electionFiles/Circular.pdf')}}"><i class="fa fa-eye"></i></a></td>
                                                     </tr>
+
+                                                @endif
                                                 </tbody>
                                             </table>
                                         </div>

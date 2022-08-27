@@ -23,7 +23,9 @@
                 <li>/</li>
                 <li><a href="{{route('international')}}">International</a></li>  
                 <li>/</li>
-                <li>Asian Beach Games</li>                                      
+                <li>Asian Beach Games</li>   
+                
+                @include('frontend.partials.back-button')                                  
             </ul>
         </div>        
     </div>
@@ -46,7 +48,13 @@
                     <!-- Info ABout --> 
                     <div class="row">
                         <div class="col-md-12">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptas cumque minima voluptatum neque nisi perferendis ad possimus ratione tempora laborum, quaerat aspernatur debitis veniam quo repellendus mollitia voluptatibus adipisci soluta quas fugit sed. Atque ex tenetur nostrum alias necessitatibus officia qui quaerat sit! Quia quasi aspernatur nisi quisquam, natus accusantium cum vero perferendis voluptate quod corporis possimus, delectus enim.</p>
+                            @if(!isset($posts))
+                            @foreach($posts as $post)
+                                <h4><a target="_blank" href="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}">{{$post->title}}</a></h4>
+                            @endforeach
+                            @else
+                            <p>No Data Found !!</p>
+                            @endif
                         </div>
                     </div>
                     <!-- End Info ABout --> 

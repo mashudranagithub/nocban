@@ -40,7 +40,20 @@
 
         <!-- Items Gallery filters-->
         <div class="portfolioContainer">
-
+@if($posts)
+        @foreach($posts as $post)
+            <!-- Item -->
+            <div class="col-xs-6 col-sm-6 col-md-4 soccer">
+                <div class="img-hover">
+                    <a href="{{route('post', $post->id)}}" class="fancybox">
+                        <img src="{{asset("frontend/assets/posts/images/".$post->category."/".$post->image)}}" alt="" class="img-responsive">
+                    </a>
+                </div>                
+                <p class="text-center">{{$post->title}}</p>
+            </div>
+            <!-- End Item -->
+        @endforeach
+@else
             <!-- Item -->
             <div class="col-xs-6 col-sm-6 col-md-4 soccer">
                 <div class="img-hover">
@@ -67,6 +80,8 @@
                 <p class="text-center">CDM Seminar Banner</p>
             </div>
             <!-- End Item -->
+
+            @endif
 
         </div>   
         <!-- End Items Gallery filters-->       

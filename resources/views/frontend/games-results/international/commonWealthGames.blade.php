@@ -23,7 +23,9 @@
                 <li>/</li>
                 <li><a href="{{route('international')}}">International</a></li>  
                 <li>/</li>
-                <li>Common Wealth Games</li>                                      
+                <li>Common Wealth Games</li> 
+
+                @include('frontend.partials.back-button')                                     
             </ul>
         </div>        
     </div>
@@ -46,7 +48,13 @@
                                 <!-- Info ABout --> 
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h4><a href="{{route('20thCommonwealthGames')}}">20th Common Wealth Games</a></h4>
+                                        @if(!isset($posts))
+                                        @foreach($posts as $post)
+                                            <h4><a target="_blank" href="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}">{{$post->title}}</a></h4>
+                                        @endforeach
+                                        @else
+                                        <p>No Data Found !!</p>
+                                        @endif
                                     </div>
                                 </div>
                                 <!-- End Info ABout --> 

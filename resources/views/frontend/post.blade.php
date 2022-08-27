@@ -55,7 +55,7 @@
                             <div class="clearfix"></div>
                             @if(isset($post->image))
                             <div class="col-md-12 pull-right">
-                                <img src="{{asset("frontend/assets/posts/images/".$post->category."/".$post->image)}}" class="img-responsive"> 
+                                <img src="{{asset("frontend/assets/posts/images/".$post->category."/".$post->image)}}" style="min-width: 100%;" class="img-responsive"> 
                             </div>
                             @endif
                             <div class="col-md-12">

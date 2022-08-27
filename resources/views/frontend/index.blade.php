@@ -36,7 +36,7 @@
 <div class="bg-dark dark-home">
     <div class="row">
         <!-- Left Content - Tabs and Carousel -->
-        <div class="col-md-9">
+        <div class="col-md-12">
             <!-- Nav Tabs -->
             <ul class="nav nav-tabs" id="myTab">
                <li class="active"><a href="#upcomming-events" data-toggle="tab">UPCOMING EVENTS</a></li>
@@ -135,8 +135,7 @@
         </div> 
         <!-- Left Content - Tabs and Carousel -->    
 
-        <!-- Right Content - Content Counter -->
-        <div class="col-md-3" id="event">
+        {{-- <div class="col-md-3" id="event">
             <aside>
                 <div class="title-color text-center">
                     <h4>Next Event</h4>
@@ -158,9 +157,8 @@
                     </li>
                 </ul>
             </aside>            
-            <!-- Content Counter -->
-        </div>
-        <!-- End Right Content - Content Counter -->
+        </div> --}}
+
     </div>
 </div>   
 <!-- Dark Home -->
@@ -170,7 +168,7 @@
     <div class="row">
         
         <!-- content Column Left -->
-        <div class="col-xs-12 col-md-6 col-lg-8">                     
+        <div class="col-xs-12 col-md-12 col-lg-12">                     
             <!-- Recent Post -->
             <div class="panel-box">
             @php $cat = $recent_news[0]->category; @endphp
@@ -210,14 +208,11 @@
         <!-- End content Left -->
 
         <!-- content Sidebar Center -->
-        <aside class="col-xs-6 col-sm-6 col-md-3 col-lg-4">                     
-            <!-- Locations -->
+        {{-- <aside class="col-xs-6 col-sm-6 col-md-3 col-lg-4">                     
             <div class="panel-box">
-            
                 <div class="titles">
                     <h4>12th South Asian Games</h4>
                 </div>
-                <!-- Locations Carousel --> 
                 <ul class="single-carousel">  
                     <li>
                         <img src="{{ asset('frontend/assets/uploads/post/Mascot_Logo.jpg') }}" alt="" class="img-responsive">
@@ -225,11 +220,9 @@
                             <p>The South Asian Games is a biennial multinational multi-sport event held amongst the athletes from South Asia. The governing body of these games is South Asia Olympic Council (SAOC). <a href="http://www.southasiangames2016.com/" target="_blank" class="text-right">View More [+]</a></p>
                         </div>
                     </li>                                
-                </ul>
-                <!-- Locations Carousel -->                                
-            </div>  
-            <!-- End Locations -->     
-        </aside>
+                </ul>                               
+            </div>      
+        </aside> --}}
         <!-- End content Sidebar Center -->
 
         <!-- Links -->

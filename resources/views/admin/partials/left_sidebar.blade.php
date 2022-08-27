@@ -77,6 +77,20 @@
                 </ul>
             </li>
 
+            <li class="treeview">
+                <a href="javascript:void(0);">
+                    <i class="fa fa-calendar text-yellow"></i>
+                    <span>Games & Results</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a class="nav-link" href="{{ route('all-games-results') }}"><i class="fa fa-circle-o text-aqua"></i>All Games & Result</a></li>
+                    <li><a class="nav-link" href="{{ route('create-games-result') }}"><i class="fa fa-circle-o text-aqua"></i>Create New Games & Result </a></li>
+                </ul>
+            </li>
+
             <li><a class="nav-link" href="{{url('/register')}}"><i class="fa fa-circle-o text-aqua"></i>Create New User </a></li>
         </ul>
     </section>

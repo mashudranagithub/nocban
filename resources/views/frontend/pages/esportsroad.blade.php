@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="{{route('homepage')}}">Home</a></li>
                 <li>/</li>
-                <li><a href="{{route('esportsroad')}}">Esports-Road to Asian Games 2022</a> </li>  
+                <li><a href="{{route('esportsroad')}}">Esports-Road to Asian Games</a> </li>  
                 <li>/</li>
                 
                 @include('frontend.partials.back-button')
@@ -63,6 +63,15 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                @if($posts)
+                                                @foreach($posts as $post)
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td><a target="_blank" href="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}">{{$post->title}}</a></td>
+                                                        <td><a target="_blank" href="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}"><i class="fa fa-eye"></i></a></td>
+                                                    </tr>
+                                                @endforeach
+                                                @else
                                                     <tr>
                                                         <td>1</td>
                                                         <td><a target="_blank" href="{{asset('frontend/assets/esportsroad/FIFA-22-Asian-Games-2022-Qualifying-Process.pdf')}}">FIFA 22 Asian Games 2022 Qualifying Process</a></td>
@@ -73,6 +82,7 @@
                                                         <td><a target="_blank" href="{{asset('frontend/assets/esportsroad/Hearthstone-Asian-Games-2022-Qualifying-Process.pdf')}}">[Hearthstone] Asian Games 2022 - Qualifying Process</a></td>
                                                         <td><a target="_blank" href="{{asset('frontend/assets/esportsroad/Hearthstone-Asian-Games-2022-Qualifying-Process.pdf')}}"><i class="fa fa-eye"></i></a></td>
                                                     </tr>
+                                                @endif
                                                 </tbody>
                                             </table>
 

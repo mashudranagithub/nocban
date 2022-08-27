@@ -126,7 +126,7 @@
                             <li><a href="{{route('boaantidoping')}}">BOA Anti-Doping</a></li> 
                             <li><a href="{{route('noa')}}">National Olympic Academy (NOA)</a></li> 
                             <li><a href="{{route('19asiangames')}}">19th Asian Games</a></li>
-                            <li><a href="{{route('boaelec2021')}}">BOA Election</a></li>
+                            <li><a href="{{route('boaelection')}}">BOA Election</a></li>
                             <li><a href="{{route('esportsroad')}}">Esports-Road to Asian Games 2022</a></li>
                             <li><a href="{{route('contactpage')}}">Contact Us</a></li> 
                         </ul>

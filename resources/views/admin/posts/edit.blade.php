@@ -51,8 +51,6 @@
                         <option @if($post->category == "athlete_profiles") selected @endif value="athlete_profiles">About BOA - Athlete Profiles</option>
                         <option @if($post->category == "affiliated_organizations") selected @endif value="affiliated_organizations">Affiliated Organizations</option>
                         <option @if($post->category == "activities") selected @endif value="activities">Activities</option>
-                        <option @if($post->category == "games_results_national") selected @endif value="games_results_national">Games & Results - National</option>
-                        <option @if($post->category == "games_results_international") selected @endif value="games_results_international">Games & Results - International</option>
                         <option @if($post->category == "sports_international") selected @endif value="sports_international">Sports Awards - International</option>
                         <option @if($post->category == "sports_regional") selected @endif value="sports_regional">Sports Awards - Regional</option>
                         <option @if($post->category == "sports_national") selected @endif value="sports_national">Sports Awards - National</option>
@@ -61,7 +59,7 @@
                         <option @if($post->category == "asian_games_19th") selected @endif value="asian_games_19th">19th Asian Games</option>
                         <option @if($post->category == "asian_games") selected @endif value="asian_games">Asian Games</option>
                         <option @if($post->category == "boa_election") selected @endif value="boa_election">BOA Election</option>
-                        <option @if($post->category == "esports_road") selected @endif value="esports_road">Esports-road to Asian Games 2022</option>
+                        <option @if($post->category == "esports_road") selected @endif value="esports_road">Esports-road to Asian Games</option>
                     </select>
             </div>
         </div>
@@ -96,14 +94,14 @@
             <div class="form-group">
                 <label for="file" class="">Post File</label>
                 <input name="file" type="file" id="file" class="form-control">
-                <p class="help-block text-red">Max Size: 5 MB and compress the file before upload</p>
+                <p class="help-block text-red">Compress the file before upload</p>
             </div>
         </div>
         <div class="col-md-3">
             <div class="form-group">
                 <label for="image" class="">Post Image</label>
                 <input class="form-control" name="image" type="file" id="image" accept=".jpg, .jpeg">
-                <p class="help-block text-red">Max Size: 2 MB and compress the file before upload</p>
+                <p class="help-block text-red">Compress the file before upload</p>
             </div>
         </div>
         @if($post->file)

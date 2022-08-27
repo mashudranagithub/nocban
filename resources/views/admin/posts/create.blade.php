@@ -54,8 +54,6 @@
                         <option value="athlete_profiles">About BOA - Athlete Profiles</option>
                         <option value="affiliated_organizations">Affiliated Organizations</option>
                         <option value="activities">Activities</option>
-                        <option value="games_results_national">Games & Results - National</option>
-                        <option value="games_results_international">Games & Results - International</option>
                         <option value="sports_international">Sports Awards - International</option>
                         <option value="sports_regional">Sports Awards - Regional</option>
                         <option value="sports_national">Sports Awards - National</option>
@@ -64,7 +62,7 @@
                         <option value="asian_games_19th">19th Asian Games</option>
                         <option value="asian_games">Asian Games</option>
                         <option value="boa_election">BOA Election</option>
-                        <option value="esports_road">Esports-road to Asian Games 2022</option>
+                        <option value="esports_road">Esports-road to Asian Games</option>
                     </select>
                 </div>
             </div>
@@ -101,14 +99,14 @@
                 <div class="form-group">
                     <label for="file" class="">Post File</label>
                     <input class="form-control" name="file" type="file" id="file" accept=".pdf">
-                    <p class="help-block text-red">Max Size: 5 MB and compress the file before upload</p>
+                    <p class="help-block text-red">Compress the file before upload</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
                     <label for="image" class="">Post Image</label>
                     <input class="form-control" name="image" type="file" id="image" accept=".jpg, .jpeg">
-                    <p class="help-block text-red">Max Size: 2 MB and compress the file before upload</p>
+                    <p class="help-block text-red">Compress the file before upload</p>
                 </div>
             </div>
             <div class="col-md-12">

@@ -144,22 +144,28 @@ class FrontendController extends Controller
 
     public function esportsroad(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'esports_road')->orderBy('created_at', 'desc')->get();
         return view('frontend.pages.esportsroad', compact(
             'settings',
+            'posts'
         ));
     }
 
-    public function boaelec2021(){
+    public function boaelection(){
         $settings = Settings::first();
-        return view('frontend.pages.boaelec2021', compact(
+        $posts = Post::where('category', 'boa_election')->orderBy('created_at', 'desc')->get();
+        return view('frontend.pages.boaelection', compact(
             'settings',
+            'posts'
         ));
     }
 
     public function asiangames19(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'asian_games_19th')->get();
         return view('frontend.pages.19asiangames', compact(
             'settings',
+            'posts'
         ));
     }
 
@@ -339,38 +345,44 @@ class FrontendController extends Controller
 
     public function international(){
         $settings = Settings::first();
-        $posts = Post::where('category', 'games_results_international')->get();
         return view('frontend.games-results.international.international', compact(
-            'settings',
-            'posts'
+            'settings'
         ));
     }
 
     public function asianGames(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'g_r_int_asian')->orderBy('created_at', 'desc')->get();
         return view('frontend.games-results.international.asianGames', compact(
             'settings',
+            'posts'
         ));
     }
 
     public function asianBeachGames(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'g_r_int_asian_beach')->orderBy('created_at', 'desc')->get();
         return view('frontend.games-results.international.asianBeachGames', compact(
             'settings',
+            'posts'
         ));
     }
 
     public function asianYouthGames(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'g_r_int_asian_youth')->orderBy('created_at', 'desc')->get();
         return view('frontend.games-results.international.asianYouthGames', compact(
             'settings',
+            'posts'
         ));
     }
 
     public function commonWealthGames(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'g_r_int_common_wealth')->orderBy('created_at', 'desc')->get();
         return view('frontend.games-results.international.commonWealthGames', compact(
             'settings',
+            'posts'
         ));
     }
 
@@ -383,63 +395,77 @@ class FrontendController extends Controller
 
     public function commonWealthYouthGames(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'g_r_int_common_wealth_youth')->orderBy('created_at', 'desc')->get();
         return view('frontend.games-results.international.commonWealthYouthGames', compact(
             'settings',
+            'posts'
         ));
     }
 
     public function childrenOfAsiaInternationalSportsGames(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'g_r_int_children')->orderBy('created_at', 'desc')->get();
         return view('frontend.games-results.international.childrenOfAsiaInternationalSportsGames', compact(
             'settings',
+            'posts'
         ));
     }
 
     public function islamicSolidarityGames(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'g_r_int_islamic')->orderBy('created_at', 'desc')->get();
         return view('frontend.games-results.international.islamicSolidarityGames', compact(
             'settings',
+            'posts'
         ));
     }
 
     public function summerOlympicGames(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'g_r_int_summer')->orderBy('created_at', 'desc')->get();
         return view('frontend.games-results.international.summerOlympicGames', compact(
             'settings',
+            'posts'
         ));
     }
 
     public function youthOlympicGames(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'g_r_int_youth_olympic')->orderBy('created_at', 'desc')->get();
         return view('frontend.games-results.international.youthOlympicGames', compact(
             'settings',
+            'posts'
         ));
     }
 
     public function southAsianGames(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'g_r_int_south_asian')->orderBy('created_at', 'desc')->get();
         return view('frontend.games-results.international.southAsianGames', compact(
             'settings',
+            'posts'
         ));
     }
 
     public function SouthAsianGames11th(){
         $settings = Settings::first();
         return view('frontend.games-results.international.11thSouthAsianGames', compact(
-            'settings',
+            'settings'
         ));
     }
 
     public function southAsianBeachGames(){
         $settings = Settings::first();
+        $posts = Post::where('category', 'g_r_int_south_asian_beach')->orderBy('created_at', 'desc')->get();
         return view('frontend.games-results.international.southAsianBeachGames', compact(
             'settings',
+            'posts'
         ));
     }
 
     public function national(){
         $settings = Settings::first();
-        $posts = Post::where('category', 'games_results_national')->get();
+        $posts = Post::where('category', 'games_results_national')->orderBy('created_at', 'desc')->get();
         return view('frontend.games-results.national.national', compact(
             'settings',
             'posts',

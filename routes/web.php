@@ -77,6 +77,12 @@ Route::group(['middleware' => ['auth']], function() {
 	Route::put('post/update/{id}', [PostController::class, 'update'])->name('update-post');
 	Route::delete('post/delete/{id}', [PostController::class, 'destroy'])->name('delete-post');
 
+	// Games & Result Routes Start Here
+	Route::get('all-games-results', [PostController::class, 'gamesResults'])->name('all-games-results');
+	Route::get('games-result/create', [PostController::class, 'gamesResultCreate'])->name('create-games-result');
+	Route::get('games-result/show/{id}', [PostController::class, 'gamesResultShow'])->name('show-games-result');
+	Route::get('games-result/edit/{id}', [PostController::class, 'gamesResultEdit'])->name('edit-games-result');
+
 	// Athlete Routes Start Here
 	Route::get('all-athlete', [AthleteController::class, 'index'])->name('all-athlete');
 	Route::get('athlete/create', [AthleteController::class, 'create'])->name('create-athlete');
@@ -106,7 +112,7 @@ Route::get('/galleries/{id}', [FrontendController::class, 'singleGallery'])->nam
 
 Route::get('/contact', [FrontendController::class, 'contactpage'])->name('contactpage');
 Route::get('/esportsroad', [FrontendController::class, 'esportsroad'])->name('esportsroad');
-Route::get('/boaelec2021', [FrontendController::class, 'boaelec2021'])->name('boaelec2021');
+Route::get('/boaelection', [FrontendController::class, 'boaelection'])->name('boaelection');
 Route::get('/19asiangames', [FrontendController::class, 'asiangames19'])->name('19asiangames');
 Route::get('/noa', [FrontendController::class, 'noa'])->name('noa');
 Route::get('/boaantidoping', [FrontendController::class, 'boaantidoping'])->name('boaantidoping');
