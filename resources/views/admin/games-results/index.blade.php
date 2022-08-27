@@ -55,6 +55,7 @@
                         <a class="btn btn-info" href="{{ route('show-games-result', $post->id) }}"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-primary" href="{{ route('edit-games-result', $post->id) }}"><i class="fa fa-edit"></i></a>
                         <form action="{{ route('delete-post',$post->id) }}" method="POST">
+                            <input name="postType" type="hidden" value="gamesResults">
                             {!! Form::open(['method' => 'DELETE','route' => ['delete-post', $post->id],'style'=>'display:inline']) !!}
                             {!! Form::submit('Delete', ['class' =>'btn btn-danger']) !!}
                             <i class="fa fa-delete"></i>

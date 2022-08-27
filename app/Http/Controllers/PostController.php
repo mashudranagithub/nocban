@@ -93,7 +93,12 @@ class PostController extends Controller
         $post->start_date = $request->input('start_date');
         $post->status = $request->input('status');
         $post->save();
-        return redirect()->route('all-posts')->with('msg','Post Created Successfully');
+        
+        if($request->input('postType') == 'gamesResults'){
+            return redirect()->route('all-games-results')->with('msg','Games and Result Created Successfully');
+        }else{
+            return redirect()->route('all-posts')->with('msg','Post Created Successfully');            
+        }
     }
 
     /**
@@ -187,7 +192,12 @@ class PostController extends Controller
         $post->start_date = $request->input('start_date');
         $post->status = $request->input('status');
         $post->save();
-        return redirect()->route('all-posts')->with('msg','Post Updated Successfully');
+        
+        if($request->input('postType') == 'gamesResults'){
+            return redirect()->route('all-games-results')->with('msg','Games and Result Updated Successfully');
+        }else{
+            return redirect()->route('all-posts')->with('msg','Post Updated Successfully');            
+        }
     }
 
     /**
@@ -196,7 +206,7 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
         $post = Post::findOrFail($id);
         if($post->file) {
@@ -212,6 +222,12 @@ class PostController extends Controller
             } 
         }
         $post->delete();
-        return redirect()->route('all-posts')->with('msg','Post deleted successfully');
+
+        if($request->input('postType') == 'gamesResults'){
+            return redirect()->route('all-games-results')->with('msg','Games and Result deleted Successfully');
+        }else{
+            return redirect()->route('all-posts')->with('msg','Post deleted Successfully');            
+        }
+
     }
 }

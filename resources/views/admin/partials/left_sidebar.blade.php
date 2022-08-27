@@ -79,7 +79,7 @@
 
             <li class="treeview">
                 <a href="javascript:void(0);">
-                    <i class="fa fa-calendar text-yellow"></i>
+                    <i class="fa fa-trophy text-red"></i>
                     <span>Games & Results</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>

@@ -76,6 +76,7 @@
                 <div class="form-group">
                     <label for="title" class="required">Games & Result Title</label>
                     <input name="title" type="text" id="title" class="form-control" required>
+                    <input name="postType" type="hidden" value="gamesResults">
                 </div>
             </div>
 
