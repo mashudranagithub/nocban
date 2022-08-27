@@ -61,15 +61,15 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                            @if($posts)
+                                                @php $i = 1; @endphp
                                                 @foreach($posts as $post)
                                                     <tr>
-                                                        <td>1</td>
+                                                        <td>{{$i++}}</td>
                                                         <td><a target="_blank" href="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}">{{$post->title}}</a></td>
                                                         <td><a target="_blank" href="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}"><i class="fa fa-eye"></i></a></td>
                                                     </tr>
                                                 @endforeach
-                                                @else
+                                                
 
                                                     <tr>
                                                         <td>1</td>
@@ -147,7 +147,7 @@
                                                         <td><a target="_blank" href="{{asset('frontend/assets/electionFiles/Circular.pdf')}}"><i class="fa fa-eye"></i></a></td>
                                                     </tr>
 
-                                                @endif
+                                                
                                                 </tbody>
                                             </table>
                                         </div>
