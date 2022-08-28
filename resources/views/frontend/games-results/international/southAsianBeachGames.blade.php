@@ -48,7 +48,7 @@
                     <!-- Info ABout --> 
                     <div class="row">
                         <div class="col-md-12">
-                            @if(!isset($posts))
+                            @if(isset($posts[0]))
                             @foreach($posts as $post)
                                 <h4><a target="_blank" href="{{asset("frontend/assets/posts/files/".$post->category."/".$post->file)}}">{{$post->title}}</a></h4>
                             @endforeach
