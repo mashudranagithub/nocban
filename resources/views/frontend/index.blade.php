@@ -67,8 +67,11 @@
           
                     </ul>
                     <div class="clearfix" style="margin-bottom: 15px;"></div>
+
+                    @if(isset($upcoming_events[0]))
                     @php $cat = $upcoming_events[0]->category; @endphp
                     <a href="{{route('newss', $cat)}}" class="btn btn-default pull-right">View More</a>
+                    @endif
                 </div>
                 <!-- Tab One - Feature News -->
                 
@@ -98,9 +101,11 @@
                     <!-- End media post--> 
                     
                     <div class="clearfix" style="margin-bottom: 15px;"></div>
+
+                    @if(isset($media_press[0]))
                     @php $cat = $media_press[0]->category; @endphp
-                    
-                    <a href="{{route('newss', $cat)}}" class="btn btn-default pull-right">View More</a>  
+                    <a href="{{route('newss', $cat)}}" class="btn btn-default pull-right">View More</a> 
+                    @endif
                 </div>
                 <!-- Tab Two - Players Staff -->
 
@@ -254,7 +259,7 @@
                 <div class="row">
                     <iframe src="https://www.youtube.com/embed/hcdKEYN5FFg" class="video"></iframe>
                     <div class="col-md-12">
-                        <h4>12th South Asian Games</h4>                                    
+                        {{-- <h4>12th South Asian Games</h4>                                     --}}
 					</div>
                 </div>
                 <!-- End Locations Video --> 

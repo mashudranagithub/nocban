@@ -47,7 +47,7 @@ class GalleryController extends Controller
         $gallery = new Gallery();
         $img = $request->file('image');
         if($img){
-            $name = $img->getClientOriginalName();
+            $name = date('dmYhis').$img->getClientOriginalName();
             $path = public_path("frontend/assets/img/galleries_thumbnails/");
             $img->move($path, $name);
             $gallery->image = $name;
@@ -103,7 +103,7 @@ class GalleryController extends Controller
                     unlink($existing_file);
                 }            
             }
-            $name = $img->getClientOriginalName();
+            $name = date('dmYhis').$img->getClientOriginalName();
             $path = public_path("frontend/assets/img/galleries_thumbnails/");
             $img->move($path, $name);
             $gallery->image = $name;

@@ -9,7 +9,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('all-posts') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('all-games-results') }}"> Back</a>
         </div>
         <br>
         <br>

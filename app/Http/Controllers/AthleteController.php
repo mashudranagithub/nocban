@@ -51,7 +51,7 @@ class AthleteController extends Controller
         $post = new Athlete();
         $img = $request->file('photo');
         if($img){
-            $name = $img->getClientOriginalName();
+            $name = date('dmYhis').$img->getClientOriginalName();
             $path = public_path("frontend/assets/img/athletes/".$request->input('division').'/'.$request->input('category'));
             $img->move($path, $name);
             $post->photo = $name;
@@ -122,7 +122,7 @@ class AthleteController extends Controller
                     unlink($existing_file);
                 } 
             }
-            $name = $img->getClientOriginalName();
+            $name = date('dmYhis').$img->getClientOriginalName();
             $path = public_path("frontend/assets/img/athletes/".$request->input('division')."/".$request->input('category'));
             $img->move($path, $name);
             $post->photo = $name;

@@ -46,7 +46,7 @@ class SlidersController extends Controller
         $img = $request->file('slider_image');
 
         if($img){
-            $name = $img->getClientOriginalName();
+            $name = date('dmYhis').$img->getClientOriginalName();
             $path = public_path("frontend/assets/img/sliders/");
             $img->move($path, $name);
             $slider->slider_image = $name;
@@ -106,7 +106,7 @@ class SlidersController extends Controller
                     unlink($existing_file);
                 }            
             }
-            $name = $img->getClientOriginalName();
+            $name = date('dmYhis').$img->getClientOriginalName();
             $path = public_path("frontend/assets/img/sliders/");
             $img->move($path, $name);
             $slider->slider_image = $name;

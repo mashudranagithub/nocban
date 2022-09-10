@@ -54,7 +54,7 @@ class FilePostController extends Controller
         $post = new FilePost();
         $img = $request->file('file');
         if($img){
-            $name = $img->getClientOriginalName();
+            $name = date('dmYhis').$img->getClientOriginalName();
             $path = public_path("frontend/assets/files/file-posts/".$request->input('category'));
             $img->move($path, $name);
             $post->file = $name;
@@ -116,7 +116,7 @@ class FilePostController extends Controller
                     unlink($existing_file);
                 } 
             }
-            $name = $img->getClientOriginalName();
+            $name = date('dmYhis').$img->getClientOriginalName();
             $path = public_path("frontend/assets/files/file-posts/".$request->input('category'));
             $img->move($path, $name);
             $post->file = $name;

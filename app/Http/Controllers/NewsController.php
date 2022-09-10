@@ -47,7 +47,7 @@ class NewsController extends Controller
         $news = new News();
         $img = $request->file('image');
         if($img){
-            $name = $img->getClientOriginalName();
+            $name = date('dmYhis').$img->getClientOriginalName();
             $path = public_path("frontend/assets/img/latest-news/");
             $img->move($path, $name);
             $news->image = $name;
@@ -105,7 +105,7 @@ class NewsController extends Controller
                     unlink($existing_file);
                 } 
             }
-            $name = $img->getClientOriginalName();
+            $name = date('dmYhis').$img->getClientOriginalName();
             $path = public_path("frontend/assets/img/latest-news/");
             $img->move($path, $name);
             $news->image = $name;

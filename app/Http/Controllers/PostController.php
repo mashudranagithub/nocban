@@ -17,7 +17,22 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = DB::table('posts')->orderBy('id', 'desc')->paginate(10);
+        $posts = DB::table('posts')->orderBy('id', 'desc')
+                ->whereNotIn('category', [
+                    'games_results_national',
+                    'g_r_int_asian',
+                    'g_r_int_asian_beach',
+                    'g_r_int_asian_youth',
+                    'g_r_int_common_wealth',
+                    'g_r_int_common_wealth_youth',
+                    'g_r_int_children',
+                    'g_r_int_islamic',
+                    'g_r_int_summer',
+                    'g_r_int_youth_olympic',
+                    'g_r_int_south_asian',
+                    'g_r_int_south_asian_beach'
+                ])
+                ->paginate(10);
         return view('admin.posts.index', compact('posts'));
     }
 
@@ -74,7 +89,7 @@ class PostController extends Controller
 
         $file = $request->file('file');
         if($file){
-            $name = $file->getClientOriginalName();
+            $name = date('dmYhis').$file->getClientOriginalName();
             $path = public_path("frontend/assets/posts/files/".$request->input('category'));
             $file->move($path, $name);
             $post->file = $name;
@@ -82,7 +97,7 @@ class PostController extends Controller
 
         $img = $request->file('image');
         if($img){
-            $name = $img->getClientOriginalName();
+            $name = date('dmYhis').$img->getClientOriginalName();
             $path = public_path("frontend/assets/posts/images/".$request->input('category'));
             $img->move($path, $name);
             $post->image = $name;
@@ -168,7 +183,7 @@ class PostController extends Controller
                     unlink($existing_file);
                 } 
             }
-            $name = $file->getClientOriginalName();
+            $name = date('dmYhis').$file->getClientOriginalName();
             $path = public_path("frontend/assets/posts/files/".$request->input('category'));
             $file->move($path, $name);
             $post->file = $name;
@@ -181,7 +196,7 @@ class PostController extends Controller
                     unlink($existing_image);
                 } 
             }
-            $name = $img->getClientOriginalName();
+            $name = date('dmYhis').$img->getClientOriginalName();
             $path = public_path("frontend/assets/posts/images/".$request->input('category'));
             $img->move($path, $name);
             $post->image = $name;

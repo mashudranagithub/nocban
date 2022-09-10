@@ -40,13 +40,12 @@ class PartnerController extends Controller
     {
         $this->validate($request,[
             'type'=>'required',
-            'link'=>'required',
             'image'=>'required'
         ]);
         $partner = new Partner();
         $img = $request->file('image');
         if($img){
-            $name = $img->getClientOriginalName();
+            $name = date('dmYhis').$img->getClientOriginalName();
             $path = public_path("frontend/assets/img/partners/".$request->input('type'));
             $img->move($path, $name);
             $partner->image = $name;
@@ -92,7 +91,6 @@ class PartnerController extends Controller
     {
         $this->validate($request,[
             'type'=>'required',
-            'link'=>'required',
             'image'=>'required'
         ]);
         $partner = Partner::find($id);
@@ -104,7 +102,7 @@ class PartnerController extends Controller
                     unlink($file_photo);
                 }            
             }
-            $name = $img->getClientOriginalName();
+            $name = date('dmYhis').$img->getClientOriginalName();
             $path = public_path("frontend/assets/img/partners/".$request->input('type'));
             $img->move($path, $name);
             $partner->image = $name;
@@ -121,7 +119,7 @@ class PartnerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
         $partner = Partner::findOrFail($id);
         if($partner->image) {

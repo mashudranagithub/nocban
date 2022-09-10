@@ -44,7 +44,7 @@ class SettingsController extends Controller
                     unlink($file_photo);
                 }            
             }
-            $name = $img->getClientOriginalName();
+            $name = date('dmYhis').$img->getClientOriginalName();
             $path = public_path("frontend/assets/img/settings/logo/");
             $img->move($path, $name);
             $settings->logo = $name;
